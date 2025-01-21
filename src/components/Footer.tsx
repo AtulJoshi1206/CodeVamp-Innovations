@@ -4,22 +4,22 @@ import { Github, Linkedin, Code2, BookOpen } from 'lucide-react';
 const socialLinks = [
   {
     icon: Github,
-    href: 'https://github.com/atuljoshi',
+    href: 'https://github.com/AtulJoshi1206',
     label: 'GitHub'
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/in/atuljoshi',
+    href: 'https://www.linkedin.com/in/atul-joshi-54928018a/',
     label: 'LinkedIn'
   },
   {
     icon: Code2,
-    href: 'https://leetcode.com/atuljoshi',
+    href: 'https://leetcode.com/u/Atul_joshi/',
     label: 'LeetCode'
   },
   {
     icon: BookOpen,
-    href: 'https://geeksforgeeks.org/user/atuljoshi',
+    href: 'https://auth.geeksforgeeks.org/user/atuljoshi1206',
     label: 'GeeksforGeeks'
   }
 ];
