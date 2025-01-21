@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code2, Menu, X } from 'lucide-react'; // Added Menu and X icons
+import { Menu, X } from 'lucide-react'; // Using icons for hamburger menu
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
@@ -44,12 +44,8 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {/* Navbar links */}
-          <div
-            className={`${
-              isOpen ? 'block' : 'hidden'
-            } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
-          >
+          {/* Desktop Navbar Links */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map(({ path, label, isHash }) => {
               const Component = isHash ? HashLink : Link;
               return (
@@ -58,7 +54,6 @@ export const Navbar = () => {
                   to={path}
                   smooth
                   className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
-                  onClick={() => setIsOpen(false)} // Close menu on link click
                 >
                   {label}
                 </Component>
@@ -69,12 +64,45 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
-              onClick={() => setIsOpen(false)} // Close menu on resume link click
             >
               Resume
             </a>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="mt-4 bg-gray-800 rounded-lg shadow-lg">
+            <ul className="flex flex-col divide-y divide-gray-700">
+              {navLinks.map(({ path, label, isHash }) => {
+                const Component = isHash ? HashLink : Link;
+                return (
+                  <li key={path} className="py-3 px-4">
+                    <Component
+                      to={path}
+                      smooth
+                      className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors block"
+                      onClick={() => setIsOpen(false)} // Close menu on link click
+                    >
+                      {label}
+                    </Component>
+                  </li>
+                );
+              })}
+              <li className="py-3 px-4">
+                <a
+                  href="https://drive.google.com/file/d/1yrkxXSgeburmzjyDbmBKDaU7kC00GVmt/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors block"
+                  onClick={() => setIsOpen(false)} // Close menu on resume link click
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );
