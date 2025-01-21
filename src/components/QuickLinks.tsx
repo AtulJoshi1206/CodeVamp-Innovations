@@ -23,7 +23,7 @@ export const QuickLinks = () => {
   return (
     <div className="bg-gray-900 py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
           {links.map(({ icon: Icon, label, href, isPage, isExternal }) => {
             if (isExternal) {
               // Render external link with <a> tag
