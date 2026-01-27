@@ -3,6 +3,7 @@ import { HeroSection } from '../components/HeroSection';
 import { QuickLinks } from '../components/QuickLinks';
 import { QuoteCarousel } from '../components/QuoteCarousel';
 import { ProjectsSection } from '../components/ProjectsSection';
+import { ResearchSection } from '../components/ResearchSection';
 import { InternshipsSection } from '../components/InternshipsSection';
 import { SkillsSection } from '../components/SkillsSection';
 import { AchievementsSection } from '../components/AchievementsSection';
@@ -16,6 +17,9 @@ export const HomePage = () => {
       <QuoteCarousel />
       <div id="projects">
         <ProjectsSection />
+      </div>
+      <div id="research">
+        <ResearchSection />
       </div>
       <div id="internships">
         <InternshipsSection />

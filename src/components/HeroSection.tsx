@@ -27,13 +27,14 @@ export const HeroSection = () => {
           </div>
           
           <p className="text-2xl font-light max-w-2xl">
-            Crafting Solutions with Code and Innovation
+            Building production systems at the intersection of AI, full-stack infrastructure, and research.
           </p>
 
-          <p className="text-lg text-gray-300 max-w-3xl">
-          I’m Atul Joshi, a dedicated software developer passionate about building innovative solutions in full-stack development, machine learning, and cloud technologies. Pursuing a B.Tech in Computer Science at Graphic Era Hill University with a CGPA of 8.4, I bring expertise in Python, Flask, MongoDB, and cloud platforms like AWS and Google Cloud.
-
-I’ve developed impactful projects, including a Search Rule Engine using AST and a full-stack coding platform. My dream is to contribute to groundbreaking technologies while mentoring aspiring developers. Skilled in AI, NLP, backend development, and agile methodologies, I aim to drive impactful, scalable software solutions.</p>
+          <p className="text-lg text-gray-400 max-w-3xl leading-relaxed">
+            Full-Stack Engineer | AI/ML Systems Builder | Research-Oriented Developer<br/>
+            B.Tech Computer Science, Graphic Era Hill University (8.4 CGPA)<br/>
+            Specializing in NLP, distributed systems, and scalable architectures for production environments.
+          </p>
           
           <HashLink 
             to="#projects" 

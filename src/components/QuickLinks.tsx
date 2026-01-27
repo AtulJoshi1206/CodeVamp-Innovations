@@ -7,15 +7,15 @@ const links = [
   { icon: User, label: 'About Me', href: '/about', isPage: true },
   { icon: Brain, label: 'Skills', href: '/#skills', isPage: false },
   { icon: Code, label: 'Projects', href: '/#projects', isPage: false },
-  { icon: Briefcase, label: 'Internships', href: '/#internships', isPage: false },
-  { icon: Trophy, label: 'Achievements', href: '/#achievements', isPage: false },
+  { icon: Briefcase, label: 'Experience', href: '/#internships', isPage: false },
+  { icon: Trophy, label: 'Research', href: '/#research', isPage: false },
   { icon: Mail, label: 'Contact', href: '/#contact', isPage: false },
   {
     icon: FileText,
     label: 'Resume',
     href: 'https://drive.google.com/file/d/1yrkxXSgeburmzjyDbmBKDaU7kC00GVmt/view?usp=drive_link',
-    isPage: false, // Not a page or hash link
-    isExternal: true, // Indicates an external link
+    isPage: false,
+    isExternal: true,
   },
 ];
 

@@ -11,7 +11,8 @@ export const Navbar = () => {
     { path: '/about', label: 'About', isHash: false },
     { path: '/#skills', label: 'Skills', isHash: true },
     { path: '/#projects', label: 'Projects', isHash: true },
-    { path: '/#internships', label: 'Internships', isHash: true },
+    { path: '/#research', label: 'Research', isHash: true },
+    { path: '/#internships', label: 'Experience', isHash: true },
     { path: '/#achievements', label: 'Achievements', isHash: true },
     { path: '/#contact', label: 'Contact', isHash: true },
   ];
