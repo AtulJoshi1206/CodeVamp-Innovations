@@ -1,102 +1,59 @@
-import React from 'react';
-import { Trophy, Code2, Star, Users, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const achievements = [
-  {
-    category: 'Competitive Programming',
-    icon: Code2,
-    metrics: [
-      '600+ LeetCode problems solved',
-      'Top 100 rank in university',
-      '5-star HackerRank rating',
-      '20+ competitive programming contests',
-    ],
-  },
-  {
-    category: 'Production Impact',
-    icon: Zap,
-    metrics: [
-      '1,000+ API requests/second (CodeVamp)',
-      '99.9% transcription accuracy (NLP)',
-      '95% search accuracy (Rule Engine)',
-      '500+ students mentored',
-    ],
-  },
-  {
-    category: 'Certifications',
-    icon: Trophy,
-    metrics: [
-      'AWS Certified Cloud Practitioner',
-      'Google Cloud Platform Certified',
-      'MongoDB University Certification',
-      'TensorFlow Developer Certificate',
-    ],
-  },
-  {
-    category: 'Open Source & Community',
-    icon: Star,
-    metrics: [
-      'GSSOC Active Contributor',
-      'Hacktoberfest Participant (2023)',
-      'Multiple accepted pull requests',
-      'Maintained personal open-source projects',
-    ],
-  },
-  {
-    category: 'Leadership',
-    icon: Users,
-    metrics: [
-      '500+ students mentored (WeCode)',
-      '40% improvement in project success rate',
-      '10+ hackathons organized',
-      'Technical workshops conducted',
-    ],
-  },
+const metrics = [
+  { value: '1,000+', label: 'API requests / sec', category: 'Systems' },
+  { value: '2', label: 'Published Papers', category: 'Research' },
+  { value: '500+', label: 'Students Mentored', category: 'Leadership' },
+  { value: '600+', label: 'LeetCode Solved', category: 'Engineering' },
+  { value: '99.9%', label: 'Uptime SLA', category: 'Systems' },
+  { value: '99.9%', label: 'NLP Accuracy', category: 'Research' },
+  { value: '10+', label: 'Hackathons Organized', category: 'Community' },
+  { value: '5*', label: 'HackerRank Rating', category: 'Engineering' },
 ];
-
-const AchievementCard = ({ category, icon: Icon, metrics }: any) => (
-  <div className="bg-gray-800 rounded-lg p-6 border-l-4 border-purple-500">
-    <div className="flex items-start space-x-4">
-      <div className="p-3 bg-purple-500/10 rounded-lg">
-        <Icon className="w-6 h-6 text-purple-500" />
-      </div>
-      <div className="flex-1">
-        <h3 className="text-lg font-semibold text-white mb-4">{category}</h3>
-        <ul className="space-y-2">
-          {metrics.map((metric: string) => (
-            <li key={metric} className="flex items-start text-gray-300">
-              <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 mr-3 flex-shrink-0" />
-              <span className="text-sm">{metric}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </div>
-);
 
 export const AchievementsSection = () => {
   return (
-    <div className="bg-gray-900 py-16">
+    <section className="py-24" id="achievements">
       <div className="container mx-auto px-6">
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Achievements & Recognition</h2>
-          <p className="text-gray-400 max-w-3xl">
-            Quantified impact across competitive programming, production systems, community contributions, and technical leadership.
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center mb-16 text-center"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px w-12 bg-accent-amber" />
+            <span className="text-accent-amber font-bold tracking-[0.3em] text-xs uppercase">Proof of Impact</span>
+          </div>
+          <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 text-center leading-[0.85] tracking-tighter">
+            Quantified <br /> <span className="text-gray-600">Success</span>
+          </h3>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {achievements.map(({ category, icon, metrics }) => (
-            <AchievementCard
-              key={category}
-              category={category}
-              icon={icon}
-              metrics={metrics}
-            />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+          {metrics.map((metric, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.05, ease: "easeOut" }}
+              className="bg-card border border-white/5 p-8 rounded-3xl flex flex-col items-center text-center group hover:border-accent-amber/30 transition-colors"
+            >
+              <span className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent-amber transition-colors duration-500">
+                {metric.value}
+              </span>
+              <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold mb-1">
+                {metric.category}
+              </span>
+              <span className="text-gray-400 text-sm font-medium">
+                {metric.label}
+              </span>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

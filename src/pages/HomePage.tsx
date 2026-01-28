@@ -1,38 +1,27 @@
-import React from 'react';
 import { HeroSection } from '../components/HeroSection';
-import { QuickLinks } from '../components/QuickLinks';
-import { QuoteCarousel } from '../components/QuoteCarousel';
+import { ProofStrip } from '../components/ProofStrip';
+import { CoreCompetencies } from '../components/CoreCompetencies';
 import { ProjectsSection } from '../components/ProjectsSection';
+
 import { ResearchSection } from '../components/ResearchSection';
-import { InternshipsSection } from '../components/InternshipsSection';
 import { SkillsSection } from '../components/SkillsSection';
+import { ExperienceSection } from '../components/ExperienceSection';
 import { AchievementsSection } from '../components/AchievementsSection';
 import { ContactSection } from '../components/ContactSection';
 
 export const HomePage = () => {
   return (
-    <div className="bg-gray-900">
+    <main className="bg-background">
       <HeroSection />
-      <QuickLinks />
-      <QuoteCarousel />
-      <div id="projects">
-        <ProjectsSection />
-      </div>
-      <div id="research">
-        <ResearchSection />
-      </div>
-      <div id="internships">
-        <InternshipsSection />
-      </div>
-      <div id="skills">
-        <SkillsSection />
-      </div>
-      <div id="achievements">
-        <AchievementsSection />
-      </div>
-      <div id="contact">
-        <ContactSection />
-      </div>
-    </div>
+      <ProofStrip />
+      <CoreCompetencies />
+      <ProjectsSection />
+
+      <ResearchSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <AchievementsSection />
+      <ContactSection />
+    </main>
   );
 };

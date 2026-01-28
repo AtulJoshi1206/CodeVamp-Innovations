@@ -1,110 +1,101 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Using icons for hamburger menu
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const navLinks = [
-    { path: '/', label: 'Home', isHash: false },
-    { path: '/about', label: 'About', isHash: false },
-    { path: '/#skills', label: 'Skills', isHash: true },
-    { path: '/#projects', label: 'Projects', isHash: true },
-    { path: '/#research', label: 'Research', isHash: true },
-    { path: '/#internships', label: 'Experience', isHash: true },
-    { path: '/#achievements', label: 'Achievements', isHash: true },
-    { path: '/#contact', label: 'Contact', isHash: true },
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const links = [
+    { label: 'Work', to: '/#projects' },
+    { label: 'Research', to: '/#research' },
+    { label: 'Skills', to: '/#skills' },
+    { label: 'Experience', to: '/#experience' },
+    { label: 'Impact', to: '/#achievements' },
+    { label: 'Contact', to: '/#contact' },
   ];
 
   return (
-    <nav className="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 relative overflow-hidden rounded-full">
-              <img
-                src="https://github.com/AtulJoshi1206/images/blob/main/WhatsApp%20Image%202024-01-12%20at%2012.55.50_c546061e.jpg?raw=true"
-                alt="Vampire Icon"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-xl font-bold text-white">
-              CodeVamp Innovations
-            </span>
-          </Link>
-
-          {/* Hamburger menu icon */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-purple-400 focus:outline-none"
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        <HashLink to="/#" className="group flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-accent-cyan flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">
+            <div className="w-1 h-3 bg-background rounded-full" />
+            <div className="w-1 h-5 bg-background rounded-full" />
+            <div className="w-1 h-3 bg-background rounded-full" />
           </div>
+          <span className="text-white font-bold tracking-tighter text-xl">ATUL</span>
+        </HashLink>
 
-          {/* Desktop Navbar Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map(({ path, label, isHash }) => {
-              const Component = isHash ? HashLink : Link;
-              return (
-                <Component
-                  key={path}
-                  to={path}
-                  smooth
-                  className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
-                >
-                  {label}
-                </Component>
-              );
-            })}
-            <a
-              href="https://drive.google.com/file/d/1yrkxXSgeburmzjyDbmBKDaU7kC00GVmt/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-10">
+          {links.map(link => (
+            <HashLink
+              key={link.label}
+              to={link.to}
+              smooth
+              className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 hover:text-white transition-colors"
             >
-              Resume
-            </a>
-          </div>
+              {link.label}
+            </HashLink>
+          ))}
+          <a
+            href="https://drive.google.com/file/d/1MjG0GUMb_wtP2tzm1kg7DvC8pNDZvEDC/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-lg border border-accent-cyan text-accent-cyan text-[10px] font-bold uppercase tracking-widest hover:bg-accent-cyan hover:text-background transition-all"
+          >
+            Resume
+          </a>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="mt-4 bg-gray-800 rounded-lg shadow-lg">
-            <ul className="flex flex-col divide-y divide-gray-700">
-              {navLinks.map(({ path, label, isHash }) => {
-                const Component = isHash ? HashLink : Link;
-                return (
-                  <li key={path} className="py-3 px-4">
-                    <Component
-                      to={path}
-                      smooth
-                      className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors block"
-                      onClick={() => setIsOpen(false)} // Close menu on link click
-                    >
-                      {label}
-                    </Component>
-                  </li>
-                );
-              })}
-              <li className="py-3 px-4">
-                <a
-                  href="https://drive.google.com/file/d/1yrkxXSgeburmzjyDbmBKDaU7kC00GVmt/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors block"
-                  onClick={() => setIsOpen(false)} // Close menu on resume link click
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+        {/* Mobile Toggle */}
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white">
+          {isOpen ? <X /> : <Menu />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 w-full bg-background border-b border-white/5 p-6 md:hidden h-screen"
+          >
+            <div className="flex flex-col gap-8 items-center pt-20">
+              {links.map(link => (
+                <HashLink
+                  key={link.label}
+                  to={link.to}
+                  smooth
+                  onClick={() => setIsOpen(false)}
+                  className="text-3xl font-bold text-gray-400 hover:text-white"
+                >
+                  {link.label}
+                </HashLink>
+              ))}
+              <a
+                href="https://drive.google.com/file/d/1MjG0GUMb_wtP2tzm1kg7DvC8pNDZvEDC/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-8 py-3 rounded-lg bg-accent-cyan text-background font-bold uppercase tracking-wider text-center"
+              >
+                Download Resume
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
+

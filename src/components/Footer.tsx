@@ -1,53 +1,37 @@
-import React from 'react';
-import { Github, Linkedin, Code2, BookOpen } from 'lucide-react';
-
-const socialLinks = [
-  {
-    icon: Github,
-    href: 'https://github.com/AtulJoshi1206',
-    label: 'GitHub'
-  },
-  {
-    icon: Linkedin,
-    href: 'https://www.linkedin.com/in/atul-joshi-54928018a/',
-    label: 'LinkedIn'
-  },
-  {
-    icon: Code2,
-    href: 'https://leetcode.com/u/Atul_joshi/',
-    label: 'LeetCode'
-  },
-  {
-    icon: BookOpen,
-    href: 'https://auth.geeksforgeeks.org/user/atuljoshi1206',
-    label: 'GeeksforGeeks'
-  }
-];
-
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400">
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col items-center space-y-6">
-          <div className="flex space-x-6">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-500 transition-colors duration-300"
-                aria-label={label}
-              >
-                <Icon className="w-6 h-6" />
-              </a>
-            ))}
+    <footer className="py-12 border-t border-white/5 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-accent-cyan flex gap-[1px] items-center justify-center">
+              <div className="w-[2px] h-2 bg-background rounded-full" />
+              <div className="w-[2px] h-3 bg-background rounded-full" />
+              <div className="w-[2px] h-2 bg-background rounded-full" />
+            </div>
+            <span className="text-white font-bold tracking-tighter">ATUL</span>
           </div>
-          <p className="text-sm">
-            © {new Date().getFullYear()} CodeVamp Innovations. All rights reserved.
+
+          <p className="text-gray-500 text-[10px] uppercase tracking-widest font-medium">
+            &copy; {new Date().getFullYear()} Designed & Engineered by Atul Joshi
           </p>
+
+          <div className="flex items-center gap-6">
+            <a
+              href="https://www.linkedin.com/in/atul-joshi-54928018a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-accent-cyan transition-colors"
+            >
+              <span className="text-[10px] uppercase tracking-widest font-bold">LinkedIn</span>
+            </a>
+            <div className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">
+              Production Ready · Research Backed
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+

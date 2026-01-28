@@ -2,78 +2,59 @@ import { Experience } from '../types';
 
 export const internships: Experience[] = [
   {
-    id: 'tesseris',
-    role: 'Software Engineer',
-    company: 'Tesseris (Research Lead)',
-    period: 'Expected: 2025-2026',
-    description: 'Lead software engineer position. Architecting scalable systems for AI research infrastructure with production-grade implementation.',
+    id: 'tesseris-intern',
+    company: 'Tesseris (tesseris.org)',
+    role: 'Founding Software Developer Intern',
+    period: 'Aug 2025 – Jan 2026',
+    description: 'Spearheading end-to-end product development for a pioneering Web3 and AI orchestration platform.',
     highlights: [
-      'Designing distributed systems for AI research',
-      'Leading technical architecture decisions',
-      'Implementing research infrastructure at scale',
-      'Optimizing ML pipeline performance',
-      'Building production-ready research tools'
+      'Led end-to-end product development across Figma-driven UI/UX, React.js and TypeScript frontend, Node.js backend, PostgreSQL, Docker, and CI/CD, owning 0 to 1 production releases on AWS and Oracle Cloud.',
+      'Engineered 10+ AI agent workflows and agent builder features for Layer-1–based orchestration and automation.',
+      'Integrated EVM smart contracts via Web3.js/Ethers.js, contributing to tokenized execution and platform infrastructure.'
     ],
-    skills: ['Systems Design', 'Python', 'Distributed Systems', 'ML Infrastructure', 'Leadership'],
-    images: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
-    ]
+    skills: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS', 'Web3.js', 'Ethers.js', 'AI Agents'],
+    images: []
   },
   {
-    id: 'wecode',
-    role: 'Technical Mentor & Leader',
-    company: 'WeCode',
-    period: 'Aug 2024 - Present',
-    description: 'Led technical mentorship at scale. Mentored 500+ students through complex full-stack projects while organizing competitive programming events and hackathons.',
+    id: 'kumoni-research',
+    company: 'GEU AI Research Lab',
+    role: 'AI Research Intern',
+    period: 'Feb 2025 – May 2025',
+    description: 'Neural Machine Translation research for low-resource languages (Kumaoni).',
     highlights: [
-      'Mentored 500+ students in programming fundamentals and advanced concepts',
-      'Organized 10+ hackathons with 40% participation growth',
-      'Improved student project success rate by 40%',
-      'Created comprehensive curriculum and learning materials',
-      'Conducted technical workshops on full-stack development'
+      'Introduced neural machine translation prototype for the Kumoni language, improving BLEU score by 25%.',
+      'Collaborated with GEU teams, incorporating feedback from 5+ review iterations to refine models.',
+      'Documented research findings and presented insights to stakeholders, supporting grant renewal and knowledge transfer.'
     ],
-    skills: ['Mentorship', 'Full Stack Development', 'Technical Leadership', 'Event Organization', 'Curriculum Design'],
-    images: [
-      'https://github.com/AtulJoshi1206/images/blob/main/IMG-20250118-WA0046.jpg?raw=true',
-      'https://github.com/AtulJoshi1206/images/blob/main/IMG-20250118-WA0047.jpg?raw=true',
-      'https://github.com/AtulJoshi1206/images/blob/main/IMG-20250118-WA0048.jpg?raw=true'
-    ]
+    skills: ['PyTorch', 'mBART', 'NLP', 'Research', 'Python'],
+    images: []
   },
   {
-    id: 'infosys',
-    role: 'NLP Engineer (Project Intern)',
-    company: 'Infosys Springboard',
-    period: 'Apr 2024 - Aug 2024',
-    description: 'Built production NLP system for meeting transcription. Achieved 99.9% accuracy using Whisper + OpenAI APIs with optimized backend architecture and Agile team practices.',
+    id: 'wecode-ta',
+    company: 'WeCode Coding Club',
+    role: 'Teaching Assistant (AI/ML)',
+    period: 'Aug 2024 – Jul 2025',
+    description: 'Mentoring and technical leadership for university-wide coding initiatives.',
     highlights: [
-      'Implemented backend services with 99.9% transcription accuracy',
-      'Integrated Whisper and OpenAI APIs for production use',
-      'Optimized API response times by 40%',
-      'Practiced Agile/Scrum methodologies in team environment',
-      'Implemented comprehensive error handling and logging systems'
+      'Facilitated in-depth learning of AI/ML principles for more than 300 students, resulting in notable improvements in understanding and a marked increase of 30% in successful project completions.',
+      'Coordinated and executed weekly coding workshops and hackathons, boosting participation by 40%.',
+      'Mentored students in personal projects, leading to 50+ successful project completions.'
     ],
-    skills: ['NLP', 'Python', 'FFmpeg', 'OpenAI API', 'Backend Development', 'Agile', 'Flask'],
-    images: [
-      'https://github.com/AtulJoshi1206/images/blob/main/IMG-20250118-WA0042.jpg?raw=true',
-      'https://github.com/AtulJoshi1206/images/blob/main/IMG-20250118-WA0040.jpg?raw=true'
-    ]
+    skills: ['Teaching', 'AI/ML', 'Problem Solving', 'Leadership', 'Hackathons'],
+    images: []
   },
   {
-    id: 'bharat',
-    role: 'Full-Stack Developer',
-    company: 'Bharat Intern',
-    period: 'Jun 2024 - Aug 2024',
-    description: 'Developed scalable web applications with focus on performance and modern architecture. Implemented RESTful APIs with comprehensive documentation and CI/CD integration.',
+    id: 'infosys-intern',
+    company: 'Infosys',
+    role: 'Project Intern',
+    period: 'Apr 2024 – Aug 2024',
+    description: 'Production AI development for automated multi-lingual meeting summarization.',
     highlights: [
-      'Built responsive web applications using modern tech stack',
-      'Designed and implemented RESTful APIs with OpenAPI documentation',
-      'Optimized application performance and page load times',
-      'Integrated third-party services and payment gateways',
-      'Implemented CI/CD pipelines for automated deployment'
+      'Developed a meeting summarizer using FFmpeg, OpenAI Whisper, and Streamlit.',
+      'Enhanced efficiency by 25% through NLP-based transcription and summarization solutions.',
+      'Presented the project at Infosys headquarters, representing Graphic Era Hill University.'
     ],
-    skills: ['React', 'Node.js', 'REST APIs', 'Performance Optimization', 'CI/CD', 'Docker'],
-    images: [
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
-    ]
+    skills: ['NLP', 'Whisper', 'FFmpeg', 'Streamlit', 'Python'],
+    images: []
   }
 ];
