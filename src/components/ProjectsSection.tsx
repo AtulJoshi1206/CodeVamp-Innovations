@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { projects } from '../data/projects';
@@ -49,9 +50,9 @@ export const ProjectsSection = () => {
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-card via-card/50 to-transparent" />
-              <a href={`/projects/${heroProject.id}`} className="absolute top-8 right-8 h-12 w-12 md:h-16 md:w-16 rounded-full bg-accent-cyan flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500 shadow-xl group-hover:scale-110 z-20">
+              <Link to={`/projects/${heroProject.id}`} className="absolute top-8 right-8 h-12 w-12 md:h-16 md:w-16 rounded-full bg-accent-cyan flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500 shadow-xl group-hover:scale-110 z-20">
                 <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 text-background" />
-              </a>
+              </Link>
             </div>
 
             {/* Text container fills remaining space and anchors content to bottom */}
@@ -107,11 +108,11 @@ export const ProjectsSection = () => {
                   <div className="h-[1px] w-0 group-hover:w-full bg-accent-cyan transition-all duration-700 mt-4" />
                 </div>
 
-                <a href={`/projects/${project.id}`} className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0 z-20">
+                <Link to={`/projects/${project.id}`} className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0 z-20">
                   <div className="p-2 rounded-full border border-accent-cyan/20">
                     <ArrowUpRight className="w-6 h-6 text-accent-cyan" />
                   </div>
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
