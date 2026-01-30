@@ -75,12 +75,22 @@ export const ProjectDetail = () => {
               transition={{ delay: 0.3 }}
               className="flex gap-4"
             >
-              <button className="h-20 w-20 rounded-full bg-white text-background flex items-center justify-center hover:bg-accent-cyan transition-colors">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-20 w-20 rounded-full bg-white text-background flex items-center justify-center hover:bg-accent-cyan transition-colors"
+              >
                 <Github size={32} />
-              </button>
-              <button className="h-20 w-20 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-background transition-all">
+              </a>
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-20 w-20 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-background transition-all"
+              >
                 <ExternalLink size={32} />
-              </button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -128,6 +138,20 @@ export const ProjectDetail = () => {
                     ))}
                   </div>
                 </div>
+
+                {project.documentation && (
+                  <div>
+                    <h2 className="text-3xl font-bold mb-6 flex items-center gap-4">
+                      <div className="h-10 w-1 bg-white/20 rounded-full" />
+                      Detailed Documentation
+                    </h2>
+                    <div className="p-8 rounded-[2.5rem] bg-card/30 border border-white/5 backdrop-blur-sm prose prose-invert max-w-none">
+                      <div className="text-gray-400 text-sm leading-relaxed whitespace-pre-wrap font-mono">
+                        {project.documentation}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -144,12 +168,26 @@ export const ProjectDetail = () => {
                 </div>
 
                 <div className="mt-12 pt-12 border-t border-white/5 flex flex-col gap-4">
-                  <button className="w-full py-5 rounded-2xl bg-accent-cyan text-background font-bold text-sm uppercase tracking-widest hover:scale-[1.02] transition-transform">
-                    View Live Demo
-                  </button>
-                  <button className="w-full py-5 rounded-2xl border border-white/10 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-background transition-all">
-                    Documentation
-                  </button>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-5 rounded-2xl bg-accent-cyan text-background font-bold text-sm uppercase tracking-widest hover:scale-[1.02] transition-transform text-center"
+                    >
+                      View Live Demo
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-5 rounded-2xl border border-white/10 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-background transition-all text-center"
+                    >
+                      Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

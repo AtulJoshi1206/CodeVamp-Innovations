@@ -8,6 +8,9 @@ export interface Project {
   challenges: string[];
   achievements: string[];
   images: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  documentation?: string;
 }
 
 export interface Experience {
@@ -29,5 +32,5 @@ export interface Skill {
   description: string;
   icon: string;
   projects: string[];
-  
+
 }

@@ -9,25 +9,69 @@ export const projects: Project[] = [
   {
     id: 'codevamp-platform',
     title: 'CodeVamp Online Coding Platform',
-    description: 'A robust cloud-based execution platform supporting 10+ languages with sub-second execution. Engineered for high concurrency and zero-latency feedback.',
+    description: 'A next-generation competitive programming platform built for speed, performance, and developer experience. Re-engineered to be 100% Serverless-ready and optimized for direct deployment on Netlify.',
     thumbnail: CodeVampImg,
-    technologies: ['React', 'Node.js', 'Docker', 'AWS', 'Redis'],
+    technologies: ['React', 'NestJS', 'MongoDB', 'Redis', 'Socket.io', 'Piston API'],
     features: [
-      'Isolated Docker containers for secure execution',
-      'Real-time WebSocket synchronization',
-      'Scalable microservices architecture',
-      'Integrated stress-testing environment'
+      'Multi-Language Support (Python, C++, Java, JS, C, Go)',
+      'Serverless Execution via Piston API',
+      'Live Contests with Real-Time Leaderboards (Socket.io)',
+      'Daily Challenges with Streak System & Badges',
+      'Advanced Profile with GitHub-inspired Heatmaps',
+      'Custom Test Case execution & debugging tool'
     ],
     challenges: [
-      'Managing resource contention in high-traffic periods',
-      'Sandboxing untrusted code across various runtimes'
+      'Migrating from Docker-based workers to Serverless execution for Netlify compatibility',
+      'Managing real-time state synchronization for competitive leaderboards',
+      'Optimizing MongoDB Atlas connectivity for dynamic serverless IPs'
     ],
     achievements: [
-      '1,000+ API requests/second',
-      '99.9% uptime SLA',
-      'Zero-downtime deployment pipeline'
+      'Zero-Latency Execution feedback',
+      '100% Serverless Architecture',
+      'Secure Isolated Code Execution'
     ],
-    images: [CodeVampImg]
+    images: [CodeVampImg],
+    githubUrl: 'https://github.com/AtulJoshi1206/Coding-Platform-CodeVamp-',
+    liveUrl: 'https://codevamp-coding-platform.netlify.app/#',
+    documentation: `
+### 🚀 Key Features
+**💻 Advanced Code IDE**
+* **Multi-Language Support:** High-performance execution for Python, C++, Java, JavaScript, C, and Go.
+* **Serverless Execution:** Powered by the Piston API—no heavy background workers needed.
+* **Custom Test Cases:** Run your code against specific inputs to debug effectively.
+* **Rich Editor:** Premium developer experience with syntax highlighting and minimalist design.
+
+**🏆 Contest System**
+* **Live Contests:** Compete with others in scheduled programming challenges.
+* **Real-Time Leaderboard:** Global rankings powered by WebSockets (Socket.io).
+* **Difficulty Scaling:** Curated problem sets from Easy to Hard.
+
+**🔥 Daily Challenges (POTD)**
+* **Streak System:** Track your consistency with an automated daily problem.
+* **Milestone Badges:** Earn special achievements for 3-day and 7-day streaks.
+
+**📊 Integrated Profile**
+* **Heatmaps:** GitHub-inspired contribution graph for solving history.
+* **Stats Dashboard:** Track your solved counts by difficulty and global rank.
+
+### 🛠 Tech Stack
+**Frontend**
+* **Framework:** React.js (Vite)
+* **Styling:** Tailwind CSS (Minimal & Premium)
+* **Animations:** Framer Motion
+* **Hosting:** Netlify
+
+**Backend (Netlify Functions)**
+* **Framework:** NestJS (deployed as a Serverless Lambda)
+* **Language:** TypeScript
+* **Database:** MongoDB Atlas
+* **Execution:** Piston Code Execution API
+
+### 🏗 Deployment (Netlify Optimized)
+1. **MongoDB Setup:** Ensure Atlas Network Access allows 0.0.0.0/0.
+2. **Environment Variables:** MONGODB_URI, JWT_SECRET, NODE_ENV.
+3. **Build Configuration:** \`npm install --include=dev && npm run build:api && npm run build:web && mkdir -p apps/api/netlify-deploy && cp apps/api/netlify-function.js apps/api/netlify-deploy/api.js\`
+    `
   },
   {
     id: 'search-rule-engine',
