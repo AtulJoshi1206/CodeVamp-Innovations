@@ -143,10 +143,10 @@ export const ProjectDetail = () => {
                   <div>
                     <h2 className="text-3xl font-bold mb-6 flex items-center gap-4">
                       <div className="h-10 w-1 bg-white/20 rounded-full" />
-                      Detailed Documentation
+                      Technical Specification
                     </h2>
-                    <div className="p-8 rounded-[2.5rem] bg-card/30 border border-white/5 backdrop-blur-sm prose prose-invert max-w-none">
-                      <div className="text-gray-400 text-sm leading-relaxed whitespace-pre-wrap font-mono">
+                    <div className="p-10 rounded-[3rem] bg-card/40 border border-white/5 backdrop-blur-md shadow-2xl">
+                      <div className="text-gray-300 text-base leading-relaxed whitespace-pre-wrap font-sans">
                         {project.documentation}
                       </div>
                     </div>
