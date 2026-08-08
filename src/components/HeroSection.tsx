@@ -13,9 +13,10 @@ export const HeroSection = () => {
   return (
     <section ref={containerRef} className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden border-b border-white/5 bg-[#0B0F1A]">
       {/* Background elements with parallax */}
+      <div className="absolute inset-0 hero-grid pointer-events-none -z-20" />
       <motion.div style={{ y: y1 }} className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-accent-primary/10 blur-[140px] rounded-full animate-pulse" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent-gold/5 blur-[140px] rounded-full animate-pulse" />
+        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-accent-primary-500/15 blur-[180px] rounded-full animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent-gold-500/10 blur-[180px] rounded-full animate-pulse" />
       </motion.div>
 
       <div className="container mx-auto px-6 relative">
@@ -27,8 +28,8 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex items-center gap-3 mb-8"
             >
-              <div className="h-[1px] w-12 bg-accent-primary" />
-              <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase text-left">
+              <div className="h-[1px] w-12 bg-accent-primary-500" />
+              <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-left">
                 Bridging Business & AI
               </span>
             </motion.div>
@@ -39,7 +40,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-4xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tighter"
             >
-              Atul <span className="text-accent-primary">Joshi</span>
+              <span className="text-gradient">Atul Joshi</span>
             </motion.h1>
 
             <motion.p

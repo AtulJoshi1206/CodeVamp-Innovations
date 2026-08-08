@@ -3,18 +3,32 @@ import { Beaker, TrendingUp } from 'lucide-react';
 
 const research = [
   {
-    id: 'kumoni-language-translator',
-    title: 'Kumoni: Indic Language Translation',
-    description: 'Advanced NLP research focused on translating Indian languages with high precision using transformer-based models.',
+    id: 'kumauni-translation-study',
+    title: 'A Comparative Study of MBart and Alternative Transformer Models for Kumauni Language Translation',
+    description: 'Published research exploring transformer-based approaches to translating the Kumauni language, with comparative analysis of model architectures and optimization techniques.',
     researchArea: 'Natural Language Processing & Language Models',
-    technologies: ['IndicBERT', 'PyTorch', 'Transformers', 'Python'],
+    technologies: ['mBART', 'PyTorch', 'Transformers', 'Python'],
     metrics: [
-      'Optimized BLEU score through model fine-tuning',
-      'Curated custom Indic language corpus',
-      'Efficient inference pipeline implementation',
-      'Production-grade translation accuracy'
+      '25% BLEU score improvement through fine-tuning',
+      'Published in AJOMCOR (Journal Volume 32, Issue 3)',
+      'Corresponding author on peer-reviewed publication',
+      'DOI: 10.56557/ajomcor/2025/v32i39482'
     ],
-    focus: 'Multilingual transfer learning, model optimization, low-resource language translation'
+    focus: 'Low-resource language translation, transformer model optimization, Indic language NLP'
+  },
+  {
+    id: 'kumaoni-culture-preservation',
+    title: 'AI-powered Analysis and Comprehensive Review of the Decline of Kumaoni Culture and Language Preservation Initiatives',
+    description: 'Research on leveraging AI for language preservation, analyzing cultural decline patterns and evaluating preservation initiatives through data-driven insights.',
+    researchArea: 'AI for Cultural Preservation & Heritage',
+    technologies: ['NLP Analysis', 'Data Science', 'PyTorch', 'Python'],
+    metrics: [
+      'Comprehensive analysis of language preservation efforts',
+      'Published in AJOMCOR (Journal Volume 32, Issue 3)',
+      'Corresponding author on peer-reviewed publication',
+      'DOI: 10.56557/ajomcor/2025/v32i39494'
+    ],
+    focus: 'Cultural heritage preservation, AI-driven research, indigenous language documentation'
   }
 ];
 

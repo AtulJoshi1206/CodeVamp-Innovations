@@ -23,8 +23,8 @@ export const AchievementsSection = () => {
           className="flex flex-col items-center mb-16 text-center"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="h-px w-12 bg-accent-gold" />
-            <span className="text-accent-gold font-bold tracking-[0.3em] text-xs uppercase">Proof of Impact</span>
+            <div className="h-px w-12 bg-accent-gold-500" />
+            <span className="text-accent-gold-500 font-bold tracking-[0.3em] text-xs uppercase">Proof of Impact</span>
           </div>
           <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 text-center leading-[0.85] tracking-tighter">
             Quantified <br /> <span className="text-gray-600">Success</span>
@@ -39,9 +39,9 @@ export const AchievementsSection = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.05, ease: "easeOut" }}
-              className="bg-card border border-white/5 p-8 rounded-3xl flex flex-col items-center text-center group hover:border-accent-gold/30 transition-colors"
+              className="card-glow-gold p-8 flex flex-col items-center text-center group"
             >
-              <span className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent-gold transition-colors duration-500">
+              <span className="text-4xl md:text-5xl font-bold text-gradient mb-2">
                 {metric.value}
               </span>
               <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold mb-1">

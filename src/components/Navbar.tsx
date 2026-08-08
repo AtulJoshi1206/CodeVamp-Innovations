@@ -23,10 +23,10 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <HashLink to="/#" className="group flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-accent-primary flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">
+          <div className="w-10 h-10 rounded-full bg-accent-primary-500 flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">
             <div className="w-1 h-3 bg-background rounded-full" />
             <div className="w-1 h-5 bg-background rounded-full" />
             <div className="w-1 h-3 bg-background rounded-full" />
@@ -41,16 +41,17 @@ export const Navbar = () => {
               key={link.label}
               to={link.to}
               smooth
-              className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 hover:text-white transition-colors"
+              className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 hover:text-white transition-colors relative pb-1 group"
             >
               {link.label}
+              <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-[2px] bg-gradient-to-r from-accent-primary-500 to-accent-gold-500 transition-all duration-300" />
             </HashLink>
           ))}
           <a
             href="https://drive.google.com/file/d/1MjG0GUMb_wtP2tzm1kg7DvC8pNDZvEDC/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 rounded-lg border border-accent-primary text-accent-primary text-[10px] font-bold uppercase tracking-widest hover:bg-accent-primary hover:text-background transition-all"
+            className="px-5 py-2 rounded-lg border border-accent-primary-500 text-accent-primary-500 text-[10px] font-bold uppercase tracking-widest hover:bg-accent-primary-500 hover:text-background transition-all"
           >
             Resume
           </a>

@@ -13,8 +13,8 @@ export const ContactSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="flex flex-col items-center mb-6">
-              <div className="h-px w-12 bg-accent-primary mb-4" />
-              <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase text-center">Get in Touch</span>
+              <div className="h-px w-12 bg-accent-primary-500 mb-4" />
+              <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-center">Get in Touch</span>
             </div>
             <h3 className="text-4xl md:text-6xl font-bold text-white mb-12 leading-[0.85] tracking-tighter">
               Let's build something <br /> <span className="text-gray-600">exceptional</span>
@@ -22,10 +22,10 @@ export const ContactSection = () => {
 
             <a
               href="mailto:atul.joshi1206@gmail.com"
-              className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-white hover:text-accent-primary transition-colors group mb-20"
+              className="inline-flex items-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-accent-primary-600 to-accent-gold-600 hover:from-accent-primary-500 hover:to-accent-gold-500 transition-all duration-500 shadow-glow mb-20 group"
             >
-              atul.joshi1206@gmail.com
-              <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+              <span className="text-2xl md:text-4xl font-bold text-white">atul.joshi1206@gmail.com</span>
+              <ArrowRight className="w-8 h-8 text-white group-hover:translate-x-2 transition-transform" />
             </a>
 
             <div className="flex justify-center flex-wrap gap-8 md:gap-12">

@@ -7,29 +7,33 @@ const competencies = [
         title: 'Business Operations & Process Automation',
         description: 'Streamlining operational workflows, replacing manual tooling with purpose-built systems, and eliminating repetitive work at scale.',
         icon: Workflow,
-        color: 'text-accent-primary',
-        bg: 'bg-accent-primary/10'
+        color: 'text-accent-primary-500',
+        bg: 'bg-accent-primary-500/10',
+        borderAccent: 'border-l-4 border-accent-primary-500'
     },
     {
         title: 'AI Integration & Agentic Workflows',
         description: 'Designing Claude-based automation, agentic workflows, and AI-driven content and task pipelines that drive measurable business impact.',
         icon: Brain,
-        color: 'text-accent-gold',
-        bg: 'bg-accent-gold/10'
+        color: 'text-accent-gold-500',
+        bg: 'bg-accent-gold-500/10',
+        borderAccent: 'border-l-4 border-accent-gold-500'
     },
     {
         title: 'Platform Migration & Systems Architecture',
         description: 'Leading large-scale platform migrations and building scalable, well-architected systems on modern full-stack infrastructure.',
         icon: GitBranch,
         color: 'text-white',
-        bg: 'bg-white/10'
+        bg: 'bg-white/10',
+        borderAccent: 'border-l-4 border-accent-primary-500'
     },
     {
         title: 'Data-Driven Decision Ops',
         description: 'Building reporting, analytics, and matching algorithms that turn operational data into actionable, measurable outcomes.',
         icon: BarChart3,
-        color: 'text-accent-primary',
-        bg: 'bg-accent-primary/10'
+        color: 'text-accent-primary-500',
+        bg: 'bg-accent-primary-500/10',
+        borderAccent: 'border-l-4 border-accent-gold-500'
     }
 ];
 
@@ -63,7 +67,7 @@ const CompetencyCard = ({ item, index }: { item: any; index: number }) => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             animate={{ rotateX: rotate.x, rotateY: rotate.y }}
-            className="group p-10 rounded-[2.5rem] bg-card border border-white/5 hover:border-white/20 transition-all duration-500 relative overflow-hidden preserve-3d"
+            className={`group card-glow p-10 relative overflow-hidden preserve-3d hover:scale-105 hover:-translate-y-1 ${item.borderAccent}`}
             style={{ transformStyle: 'preserve-3d' }}
         >
             <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
@@ -91,8 +95,8 @@ export const CoreCompetencies = () => {
                             transition={{ duration: 0.8 }}
                             className="flex items-center gap-3 mb-6"
                         >
-                            <div className="h-px w-12 bg-accent-primary" />
-                            <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase">Expertise</span>
+                            <div className="h-px w-12 bg-accent-primary-500" />
+                            <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase">Expertise</span>
                         </motion.div>
                         <h3 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[0.85] tracking-tighter">
                             Core <br /> <span className="text-gray-600">Competencies</span>

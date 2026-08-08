@@ -7,115 +7,10 @@ import KumoniImg from '../Images/Kumoni.png';
 
 export const projects: Project[] = [
   {
-    id: 'saas-contract-management',
-    category: 'business',
-    title: 'SaaS Subscription & Contract Management System',
-    description: 'A purpose-built platform replacing a ClickUp-based legacy workflow with a scalable system for managing SaaS subscriptions, vendor contracts, and renewal operations across the business.',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80',
-    technologies: ['Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
-    features: [
-      'Designed a normalized PostgreSQL schema to model subscriptions, contracts, vendors, and renewal cycles',
-      'Built automated renewal alerts and contract lifecycle tracking to eliminate manual ClickUp tracking',
-      'Implemented role-based access control for finance, ops, and leadership stakeholders',
-      'Migrated years of legacy contract data from ClickUp into a structured relational model',
-      'Built a reporting dashboard for spend visibility across active SaaS subscriptions',
-      'Delivered a Prisma-based API layer with type-safe queries across Next.js server routes'
-    ],
-    challenges: [
-      'Reconciling inconsistent, unstructured contract data accumulated across years of ClickUp usage',
-      'Designing a data model flexible enough for varied contract and billing structures',
-      'Ensuring zero-downtime cutover from the legacy ClickUp process to the new system'
-    ],
-    achievements: [
-      '100% Legacy Data Migrated',
-      'Zero-Downtime Cutover',
-      '1 Unified Source of Truth'
-    ],
-    images: []
-  },
-  {
-    id: 'course-platform-migration',
-    category: 'business',
-    title: 'Course Platform Migration (AIT)',
-    description: 'Led the migration of the organization\'s training content library to the AIT learning platform, pairing the migration with AI-powered content automation tooling.',
-    thumbnail: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80',
-    technologies: ['Claude', 'Automation', 'Content Ops', 'AIT Platform'],
-    features: [
-      'Migrated 31+ role-aligned training courses from legacy tooling to the AIT platform',
-      'Developed 5+ reusable Claude Skills to automate content formatting, structuring, and QA',
-      'Standardized course metadata and lesson structure across the entire training library',
-      'Built repeatable migration playbooks to reduce per-course migration time',
-      'Coordinated with subject-matter owners to validate content accuracy post-migration'
-    ],
-    challenges: [
-      'Preserving formatting fidelity across a wide variety of legacy course structures',
-      'Automating repetitive content transformation without losing course-specific nuance',
-      'Migrating at scale while keeping the training library live for active learners'
-    ],
-    achievements: [
-      '31+ Courses Migrated',
-      '5+ Claude Skills Built',
-      '100% Content Fidelity Preserved'
-    ],
-    images: []
-  },
-  {
-    id: 'peer-connect-algorithm',
-    category: 'business',
-    title: 'Peer Connect Algorithm',
-    description: 'Built a Python/NetworkX-based pairing system that matches employees across ventures for a monthly peer-connect program, driving cross-team relationships at scale.',
-    thumbnail: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80',
-    technologies: ['Python', 'NetworkX', 'Automation'],
-    features: [
-      'Modeled employees and prior pairings as a graph to avoid repeat matches across cycles',
-      'Implemented weighted matching to balance cross-venture diversity with fair participation',
-      'Automated monthly pairing generation and notification delivery end-to-end',
-      'Built configurable constraints for team size, venture spread, and opt-out handling',
-      'Tracked participation history to continuously improve match quality over time'
-    ],
-    challenges: [
-      'Avoiding repeat pairings while maximizing cross-venture diversity at scale',
-      'Balancing algorithmic fairness with organic, meaningful connections',
-      'Automating the full cycle reliably every month with minimal manual oversight'
-    ],
-    achievements: [
-      '100+ Monthly Participants',
-      'Fully Automated Monthly Cycle',
-      '0 Manual Matching Hours'
-    ],
-    images: []
-  },
-  {
-    id: 'ai-workflow-automation',
-    category: 'business',
-    title: 'AI Workflow Automation Suite',
-    description: 'A Claude-based automation system that generates course content, formats training materials, and executes bulk ClickUp task operations to remove manual operational overhead.',
-    thumbnail: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80',
-    technologies: ['Claude', 'ClickUp MCP', 'Automation', 'TypeScript'],
-    features: [
-      'Built Claude-based workflows for automated course content generation and formatting',
-      'Integrated ClickUp MCP to perform bulk task creation, updates, and status transitions',
-      'Designed reusable automation skills adopted across multiple operational workflows',
-      'Reduced manual content formatting time through templated, repeatable prompting pipelines',
-      'Enabled non-technical stakeholders to trigger automations without direct API access'
-    ],
-    challenges: [
-      'Ensuring consistent output quality across varied content types and formats',
-      'Safely executing bulk operations against production ClickUp workspaces',
-      'Designing prompts and skills that generalize across multiple use cases'
-    ],
-    achievements: [
-      '25%+ Efficiency Gains',
-      'Multiple Bulk Ops Automated',
-      '5+ Reusable Automation Skills'
-    ],
-    images: []
-  },
-  {
     id: 'codevamp-platform',
     category: 'engineering',
     title: 'CodeVamp Online Coding Platform',
-    description: 'A next-generation competitive programming platform built for speed, performance, and developer experience. Re-engineered to be 100% Serverless-ready and optimized for direct deployment on Netlify.',
+    description: 'A competitive programming platform that drives user engagement and retention through real-time competition, streaks, and gamification. Demonstrates how high-performance infrastructure and engaging UX create a scalable community product.',
     thumbnail: CodeVampImg,
     technologies: ['React', 'NestJS', 'MongoDB', 'Redis', 'Socket.io', 'Piston API'],
     features: [
@@ -186,7 +81,7 @@ Backend (Netlify Functions)
     id: 'search-rule-engine',
     category: 'engineering',
     title: 'Search Rule Engine with AST',
-    description: 'An advanced rule execution engine utilizing Abstract Syntax Trees for complex dynamic filtering and validation at scale.',
+    description: 'A dynamic rule engine that powers complex business logic at scale — handling 1M+ queries daily. Demonstrates how intelligent parsing and optimization enable businesses to implement flexible, user-defined workflows without redeployment.',
     thumbnail: SearchRuleImg,
     technologies: ['Python', 'AST', 'MongoDB'],
     features: [
@@ -209,7 +104,7 @@ Backend (Netlify Functions)
     id: 'kumoni-translator',
     category: 'engineering',
     title: 'Kumoni AI Translator',
-    description: 'State-of-the-art Neural Machine Translation system for the Kumaoni language, focusing on low-resource preservation.',
+    description: 'A Neural Machine Translation system for the Kumaoni language that demonstrates the business value of AI in cultural preservation and community access. Published research with measurable impact on language digitization efforts.',
     thumbnail: KumoniImg,
     technologies: ['PyTorch', 'mBART', 'Transformers'],
     features: [
@@ -232,7 +127,7 @@ Backend (Netlify Functions)
     id: 'agentic-infra',
     category: 'engineering',
     title: 'Agentic Workflow Orchestrator',
-    description: 'A distributed system for managing and executing complex AI agent workflows with Layer-1 orchestration.',
+    description: 'An AI agent orchestration platform that automates complex business workflows across multiple systems. Showcases how intelligent agent coordination and tokenized execution reduce manual overhead and enable autonomous operations at scale.',
     thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
     technologies: ['TypeScript', 'Node.js', 'LLMs', 'Web3.js'],
     features: [
@@ -255,7 +150,7 @@ Backend (Netlify Functions)
     id: 'distributed-logger',
     category: 'engineering',
     title: 'High-Throughput Distributed Logger',
-    description: 'High-performance logging infrastructure designed to process millions of log entries with real-time anomaly detection.',
+    description: 'A production logging system that processes 500GB+ logs daily with real-time anomaly detection. Demonstrates how reliable observability infrastructure directly reduces operational risk and speeds incident response time.',
     thumbnail: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80',
     technologies: ['Go', 'Kafka', 'Elasticsearch', 'Grafana'],
     features: [
@@ -271,6 +166,29 @@ Backend (Netlify Functions)
       'Processed 500GB+ logs daily',
       'Reduced alert fatigue by 60%',
       '99.99% data durability'
+    ],
+    images: []
+  },
+  {
+    id: 'your-project-here',
+    category: 'engineering',
+    title: 'Your Next Big Project',
+    description: 'A placeholder for your next innovation. Update this with your latest project details, technologies, and business impact.',
+    thumbnail: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80',
+    technologies: ['Your Tech Stack'],
+    features: [
+      'Your key features here',
+      'Add impact metrics and outcomes',
+      'Describe the business value delivered'
+    ],
+    challenges: [
+      'Technical challenges overcome',
+      'Business constraints navigated'
+    ],
+    achievements: [
+      'Measurable outcome 1',
+      'Measurable outcome 2',
+      'Measurable outcome 3'
     ],
     images: []
   }
