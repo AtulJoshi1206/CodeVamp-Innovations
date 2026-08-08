@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
 import { internships } from '../data/internships';
+import { CaseStudyCard } from './CaseStudyCard';
 
 export const ExperienceSection = () => {
+  const weblifeEntry = internships.find(e => e.id === 'weblife-labs');
+
   return (
     <section className="py-24 bg-background" id="experience">
       <div className="container mx-auto px-6">
@@ -22,8 +25,49 @@ export const ExperienceSection = () => {
           </h3>
         </motion.div>
 
+        {weblifeEntry && (
+          <div className="mb-24">
+            <CaseStudyCard
+              heroMetric="40%+"
+              heroLabel="SLA Turnaround Reduction"
+              problem={[
+                'Manual course migration blocked training delivery at scale',
+                'ClickUp-based processes did not support product operations',
+                'Cross-venture collaboration had no structured mechanism'
+              ]}
+              approach={[
+                'Built SaaS Contract Management System (Next.js, PostgreSQL, Prisma)',
+                'Engineered AI-driven course migration (31+ courses, 5+ Claude Skills)',
+                'Deployed algorithmic peer-matching (Python, NetworkX, 100+ monthly users)'
+              ]}
+              outcome={[
+                '40%+ reduction in operational SLA turnaround',
+                'End-to-end AIT platform ownership (internal + external)',
+                'Fully automated monthly matching with zero manual hours'
+              ]}
+              subProjects={[
+                {
+                  title: 'SaaS Contract System',
+                  desc: 'Replaced legacy ClickUp tooling',
+                  metric: '100% Data Migrated'
+                },
+                {
+                  title: 'AIT Platform',
+                  desc: 'Course migration & automation',
+                  metric: '31+ Courses Live'
+                },
+                {
+                  title: 'Peer Connect',
+                  desc: 'Cross-venture matching algorithm',
+                  metric: '100+ Monthly Participants'
+                }
+              ]}
+            />
+          </div>
+        )}
+
         <div className="space-y-8">
-          {internships.map((exp, index) => (
+          {internships.filter(e => e.id !== 'weblife-labs').map((exp, index) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, x: -40 }}

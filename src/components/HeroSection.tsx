@@ -11,7 +11,7 @@ export const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section ref={containerRef} className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden border-b border-white/5 bg-[#0B0F1A]">
+    <section ref={containerRef} className="relative pt-40 pb-16 md:pt-56 md:pb-32 overflow-hidden border-b border-white/5 bg-[#0B0F1A]">
       {/* Background elements with parallax */}
       <div className="absolute inset-0 hero-grid pointer-events-none -z-20" />
       <motion.div style={{ y: y1 }} className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
@@ -29,7 +29,7 @@ export const HeroSection = () => {
               className="flex items-center gap-3 mb-8"
             >
               <div className="h-[1px] w-12 bg-accent-primary-500" />
-              <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-left">
+              <span className="font-serif-display text-sm text-accent-primary-500">
                 Technical Lead (Product) · Bridging Business & AI
               </span>
             </motion.div>
@@ -38,16 +38,16 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-4xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tighter"
+              className="mb-12 leading-[0.9] tracking-tighter"
             >
-              <span className="text-gradient">Atul Joshi</span>
+              <span className="font-serif-display text-5xl md:text-7xl lg:text-8xl text-gradient">Atul Joshi</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="text-xl md:text-2xl text-gray-400 max-w-xl mb-12 leading-relaxed font-medium"
+              className="text-xl md:text-2xl text-gray-400 max-w-xl mb-16 leading-relaxed font-medium"
             >
               Building scalable automation systems and AI-driven workflows that create measurable business impact — specialized in
               <span className="text-white"> training infrastructure, platform migrations, and intelligent process optimization</span>.

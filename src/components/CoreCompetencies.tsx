@@ -84,7 +84,7 @@ const CompetencyCard = ({ item, index }: { item: any; index: number }) => {
 
 export const CoreCompetencies = () => {
     return (
-        <section className="py-24 bg-background relative overflow-hidden">
+        <section className="py-40 bg-background relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
                     <div className="flex-1">
@@ -93,10 +93,12 @@ export const CoreCompetencies = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="flex items-center gap-3 mb-6"
+                            className="flex flex-col gap-4 mb-6"
                         >
-                            <div className="h-px w-12 bg-accent-primary-500" />
-                            <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase">Expertise</span>
+                            <div className="flex items-center gap-3">
+                                <div className="h-px w-12 bg-accent-primary-500" />
+                                <span className="font-serif-display text-xs uppercase text-gray-500">Core Impact Areas</span>
+                            </div>
                         </motion.div>
                         <h3 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[0.85] tracking-tighter">
                             Core <br /> <span className="text-gray-600">Competencies</span>
@@ -106,7 +108,7 @@ export const CoreCompetencies = () => {
                         </p>
                     </div>
 
-                    <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-8 perspective-1000">
+                    <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-10 perspective-1000">
                         {competencies.map((item, index) => (
                             <CompetencyCard key={item.title} item={item} index={index} />
                         ))}

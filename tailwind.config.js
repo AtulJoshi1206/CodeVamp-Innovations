@@ -27,6 +27,7 @@ export default {
       fontFamily: {
         heading: ['Space Grotesk', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
+        serif: ['Instrument Serif', 'serif'],
       },
       boxShadow: {
         glow: '0 0 20px rgba(99, 102, 241, 0.4)',
