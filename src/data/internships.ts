@@ -2,6 +2,21 @@ import { Experience } from '../types';
 
 export const internships: Experience[] = [
   {
+    id: 'weblife-labs',
+    company: 'Weblife Labs',
+    role: 'Business Operations & AI Automation Lead',
+    period: 'Aug 2025 – Present',
+    description: 'Leading the technical build of a SaaS Contract Management System and driving business-wide AI automation initiatives across training, operations, and cross-venture programs.',
+    highlights: [
+      'Leading the technical build of a SaaS Subscription & Contract Management System (Next.js, Node.js, TypeScript, PostgreSQL, Prisma) to replace legacy ClickUp-based tooling.',
+      'Migrated 31+ role-aligned training courses to the AIT platform and built 5+ reusable Claude Skills for content automation and formatting.',
+      'Designed and deployed the Peer Connect algorithm (Python, NetworkX) for cross-venture employee matching, serving 100+ participants monthly.',
+      'Built a Claude-based AI workflow automation suite for course content generation, formatting, and bulk ClickUp task operations, driving 25%+ efficiency gains.'
+    ],
+    skills: ['Operations Automation', 'AI Integration', 'TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Python', 'NetworkX', 'ClickUp MCP', 'Claude'],
+    images: []
+  },
+  {
     id: 'tesseris-intern',
     company: 'Tesseris (tesseris.org)',
     role: 'Founding Software Developer Intern',

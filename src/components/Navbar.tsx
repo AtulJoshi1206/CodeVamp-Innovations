@@ -26,7 +26,7 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <HashLink to="/#" className="group flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-accent-cyan flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">
+          <div className="w-10 h-10 rounded-full bg-accent-primary flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">
             <div className="w-1 h-3 bg-background rounded-full" />
             <div className="w-1 h-5 bg-background rounded-full" />
             <div className="w-1 h-3 bg-background rounded-full" />
@@ -50,7 +50,7 @@ export const Navbar = () => {
             href="https://drive.google.com/file/d/1MjG0GUMb_wtP2tzm1kg7DvC8pNDZvEDC/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 rounded-lg border border-accent-cyan text-accent-cyan text-[10px] font-bold uppercase tracking-widest hover:bg-accent-cyan hover:text-background transition-all"
+            className="px-5 py-2 rounded-lg border border-accent-primary text-accent-primary text-[10px] font-bold uppercase tracking-widest hover:bg-accent-primary hover:text-background transition-all"
           >
             Resume
           </a>
@@ -87,7 +87,7 @@ export const Navbar = () => {
                 href="https://drive.google.com/file/d/1MjG0GUMb_wtP2tzm1kg7DvC8pNDZvEDC/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 px-8 py-3 rounded-lg bg-accent-cyan text-background font-bold uppercase tracking-wider text-center"
+                className="mt-4 px-8 py-3 rounded-lg bg-accent-primary text-background font-bold uppercase tracking-wider text-center"
               >
                 Download Resume
               </a>

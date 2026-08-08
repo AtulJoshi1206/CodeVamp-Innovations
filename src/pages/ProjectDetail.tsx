@@ -11,7 +11,7 @@ export const ProjectDetail = () => {
     return (
       <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
-        <Link to="/" className="text-accent-cyan flex items-center gap-2 hover:underline">
+        <Link to="/" className="text-accent-primary flex items-center gap-2 hover:underline">
           <ChevronLeft /> Back to Home
         </Link>
       </div>
@@ -23,8 +23,8 @@ export const ProjectDetail = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30">
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-accent-cyan/20 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-amber/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-accent-primary/20 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-gold/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="container mx-auto px-6">
@@ -42,10 +42,10 @@ export const ProjectDetail = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex items-center gap-3 mb-6"
               >
-                <div className="h-px w-8 bg-accent-cyan" />
+                <div className="h-px w-8 bg-accent-primary" />
                 <div className="flex gap-2">
                   {project.technologies.map(tech => (
-                    <span key={tech} className="text-[10px] font-bold text-accent-cyan uppercase tracking-widest">{tech}</span>
+                    <span key={tech} className="text-[10px] font-bold text-accent-primary uppercase tracking-widest">{tech}</span>
                   ))}
                 </div>
               </motion.div>
@@ -79,7 +79,7 @@ export const ProjectDetail = () => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-20 w-20 rounded-full bg-white text-background flex items-center justify-center hover:bg-accent-cyan transition-colors"
+                className="h-20 w-20 rounded-full bg-white text-background flex items-center justify-center hover:bg-accent-primary transition-colors"
               >
                 <Github size={32} />
               </a>
@@ -112,13 +112,13 @@ export const ProjectDetail = () => {
               <div className="space-y-12 pr-0 lg:pr-12">
                 <div>
                   <h2 className="text-3xl font-bold mb-6 flex items-center gap-4">
-                    <div className="h-10 w-1 bg-accent-cyan rounded-full" />
+                    <div className="h-10 w-1 bg-accent-primary rounded-full" />
                     Key Features
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {project.features.map(feature => (
                       <div key={feature} className="p-6 rounded-3xl bg-card border border-white/5 flex items-start gap-4">
-                        <div className="mt-1 h-2 w-2 rounded-full bg-accent-cyan shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                        <div className="mt-1 h-2 w-2 rounded-full bg-accent-primary shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                         <span className="text-gray-400 text-sm leading-relaxed">{feature}</span>
                       </div>
                     ))}
@@ -127,12 +127,12 @@ export const ProjectDetail = () => {
 
                 <div>
                   <h2 className="text-3xl font-bold mb-6 flex items-center gap-4">
-                    <div className="h-10 w-1 bg-accent-amber rounded-full" />
+                    <div className="h-10 w-1 bg-accent-gold rounded-full" />
                     Engineering Challenges
                   </h2>
                   <div className="space-y-4">
                     {project.challenges.map(challenge => (
-                      <div key={challenge} className="p-6 rounded-3xl bg-card border border-white/5 border-l-accent-amber border-l-2">
+                      <div key={challenge} className="p-6 rounded-3xl bg-card border border-white/5 border-l-accent-gold border-l-2">
                         <p className="text-gray-400 text-sm leading-relaxed">{challenge}</p>
                       </div>
                     ))}
@@ -173,7 +173,7 @@ export const ProjectDetail = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-5 rounded-2xl bg-accent-cyan text-background font-bold text-sm uppercase tracking-widest hover:scale-[1.02] transition-transform text-center"
+                      className="w-full py-5 rounded-2xl bg-accent-primary text-background font-bold text-sm uppercase tracking-widest hover:scale-[1.02] transition-transform text-center"
                     >
                       View Live Demo
                     </a>
@@ -200,7 +200,7 @@ export const ProjectDetail = () => {
         <div className="container mx-auto px-6 text-center">
           <span className="text-gray-600 font-bold uppercase tracking-[0.4em] text-xs mb-8 block">Up Next</span>
           <Link to="/#projects" className="group">
-            <h3 className="text-5xl md:text-8xl font-bold text-white mb-10 hover:text-accent-cyan transition-colors">Check out more <br /> works <ArrowRight className="inline-block w-12 h-12 md:w-20 md:h-20 group-hover:translate-x-4 transition-transform" /></h3>
+            <h3 className="text-5xl md:text-8xl font-bold text-white mb-10 hover:text-accent-primary transition-colors">Check out more <br /> works <ArrowRight className="inline-block w-12 h-12 md:w-20 md:h-20 group-hover:translate-x-4 transition-transform" /></h3>
           </Link>
         </div>
       </section>

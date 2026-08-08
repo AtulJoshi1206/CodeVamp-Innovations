@@ -13,8 +13,8 @@ export const ContactSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="flex flex-col items-center mb-6">
-              <div className="h-px w-12 bg-accent-cyan mb-4" />
-              <span className="text-accent-cyan font-bold tracking-[0.3em] text-xs uppercase text-center">Get in Touch</span>
+              <div className="h-px w-12 bg-accent-primary mb-4" />
+              <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase text-center">Get in Touch</span>
             </div>
             <h3 className="text-4xl md:text-6xl font-bold text-white mb-12 leading-[0.85] tracking-tighter">
               Let's build something <br /> <span className="text-gray-600">exceptional</span>
@@ -22,7 +22,7 @@ export const ContactSection = () => {
 
             <a
               href="mailto:atul.joshi1206@gmail.com"
-              className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-white hover:text-accent-cyan transition-colors group mb-20"
+              className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-white hover:text-accent-primary transition-colors group mb-20"
             >
               atul.joshi1206@gmail.com
               <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
@@ -41,7 +41,7 @@ export const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-2 group"
                 >
-                  <div className="p-4 rounded-full bg-white/5 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all border border-white/5">
+                  <div className="p-4 rounded-full bg-white/5 group-hover:bg-accent-primary/10 group-hover:text-accent-primary transition-all border border-white/5">
                     <social.icon className="w-6 h-6" />
                   </div>
                   <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold group-hover:text-white transition-colors">

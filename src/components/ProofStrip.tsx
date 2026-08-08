@@ -3,24 +3,24 @@ import { FileText, Users, Zap, Award } from 'lucide-react';
 
 const stats = [
     {
-        icon: <FileText className="w-5 h-5 text-accent-amber" />,
-        label: "2 Published Papers",
-        sub: "Corresponding Author"
+        icon: <FileText className="w-5 h-5 text-accent-gold" />,
+        label: "31+ Courses Migrated",
+        sub: "AIT Platform Rollout"
     },
     {
-        icon: <Zap className="w-5 h-5 text-accent-cyan" />,
-        label: "1,000+ API req/s",
-        sub: "Production Infrastructure"
+        icon: <Users className="w-5 h-5 text-accent-primary" />,
+        label: "100+ Monthly Participants",
+        sub: "Peer Connect Matching"
     },
     {
-        icon: <Users className="w-5 h-5 text-accent-cyan" />,
-        label: "500+ Mentored",
-        sub: "Students across Tech"
+        icon: <Zap className="w-5 h-5 text-accent-primary" />,
+        label: "5+ Claude Skills Built",
+        sub: "AI Workflow Automation"
     },
     {
-        icon: <Award className="w-5 h-5 text-accent-amber" />,
-        label: "DOI Published",
-        sub: "Academic Credibility"
+        icon: <Award className="w-5 h-5 text-accent-gold" />,
+        label: "25%+ Efficiency Gains",
+        sub: "Business Process Optimization"
     }
 ];
 

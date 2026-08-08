@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-background text-white font-body antialiased selection:bg-accent-cyan selection:text-background;
+    @apply bg-background text-white font-body antialiased selection:bg-accent-primary selection:text-background;
   }
 
   h1,
@@ -30,10 +30,10 @@
   }
 
   .text-gradient-cyan {
-    @apply bg-gradient-to-r from-accent-cyan to-blue-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-primary to-blue-400 bg-clip-text text-transparent;
   }
 
   .text-gradient-amber {
-    @apply bg-gradient-to-r from-accent-amber to-orange-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-gold to-orange-400 bg-clip-text text-transparent;
   }
 }

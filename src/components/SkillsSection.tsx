@@ -69,11 +69,11 @@ const SkillCard = ({ category, idx }: { category: any; idx: number }) => {
         }}
       />
 
-      <div className="relative z-10 p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-[#0B101B] h-full flex flex-col border border-white/5 transition-all duration-500 group-hover:border-accent-cyan/20">
+      <div className="relative z-10 p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-[#0B101B] h-full flex flex-col border border-white/5 transition-all duration-500 group-hover:border-accent-primary/20">
         <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-700`} />
 
         <div className="flex items-center gap-4 mb-6 md:mb-8">
-          <div className="p-2 md:p-3 rounded-xl md:rounded-2xl bg-white/5 text-white group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500">
+          <div className="p-2 md:p-3 rounded-xl md:rounded-2xl bg-white/5 text-white group-hover:bg-accent-primary/10 group-hover:text-accent-primary transition-all duration-500">
             <category.icon size={20} className="md:w-6 md:h-6" />
           </div>
           <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight">{category.title}</h4>
@@ -103,7 +103,7 @@ const SkillCard = ({ category, idx }: { category: any; idx: number }) => {
 export const SkillsSection = () => {
   return (
     <section className="py-24 bg-background relative overflow-hidden" id="skills">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-accent-cyan/5 blur-[120px] rounded-full pointer-events-none opacity-50" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-accent-primary/5 blur-[120px] rounded-full pointer-events-none opacity-50" />
 
       <div className="container mx-auto px-6 relative">
         <div className="flex flex-col mb-12 md:mb-16">
@@ -114,8 +114,8 @@ export const SkillsSection = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3 mb-6"
           >
-            <div className="h-px w-12 bg-accent-cyan" />
-            <span className="text-accent-cyan font-bold tracking-[0.3em] text-xs uppercase text-left">Toolkit</span>
+            <div className="h-px w-12 bg-accent-primary" />
+            <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase text-left">Toolkit</span>
           </motion.div>
           <h3 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tighter">
             Technical <br /> <span className="text-gray-600">Competencies</span>
@@ -135,12 +135,12 @@ export const SkillsSection = () => {
             className="lg:col-span-1 hidden lg:flex items-center justify-center p-12 rounded-[2.5rem] border border-dashed border-white/10 bg-transparent relative overflow-hidden group"
           >
             <div className="text-center group-hover:scale-105 transition-transform duration-700">
-              <div className="text-accent-cyan font-bold tracking-[0.2em] text-[10px] uppercase mb-6">Continuous Learning</div>
+              <div className="text-accent-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6">Continuous Learning</div>
               <p className="text-gray-400 text-lg italic font-medium leading-relaxed">
                 "Systematically expanding the frontier of what's possible with code & intelligence."
               </p>
             </div>
-            <div className="absolute -bottom-1/2 -right-1/2 w-64 h-64 bg-accent-amber/10 blur-[80px] rounded-full group-hover:bg-accent-cyan/10 transition-colors duration-1000" />
+            <div className="absolute -bottom-1/2 -right-1/2 w-64 h-64 bg-accent-gold/10 blur-[80px] rounded-full group-hover:bg-accent-primary/10 transition-colors duration-1000" />
           </motion.div>
         </div>
       </div>

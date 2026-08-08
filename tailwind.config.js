@@ -7,8 +7,8 @@ export default {
         background: '#0B0F1A',
         card: '#12172A',
         accent: {
-          cyan: '#22D3EE',
-          amber: '#F59E0B',
+          primary: '#6366F1',
+          gold: '#F5B942',
         },
       },
       fontFamily: {
