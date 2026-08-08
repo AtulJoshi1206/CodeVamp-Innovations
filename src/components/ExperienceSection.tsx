@@ -28,6 +28,9 @@ export const ExperienceSection = () => {
         {weblifeEntry && (
           <div className="mb-24">
             <CaseStudyCard
+              company={weblifeEntry.company}
+              role={weblifeEntry.role}
+              period={weblifeEntry.period}
               heroMetric="40%+"
               heroLabel="SLA Turnaround Reduction"
               problem={[

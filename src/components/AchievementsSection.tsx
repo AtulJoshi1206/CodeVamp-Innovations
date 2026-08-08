@@ -8,11 +8,12 @@ const metrics = [
   { value: '99.9%', label: 'NLP Accuracy', category: 'Research' },
   { value: '10+', label: 'Hackathons Organized', category: 'Community' },
   { value: '31+', label: 'Courses Migrated & Owned', category: 'Product' },
+  { value: '#18', label: 'Global Rank — Spark-Wars 4.0', category: 'Competitive' },
 ];
 
 export const AchievementsSection = () => {
   return (
-    <section className="py-24" id="achievements">
+    <section className="py-32 bg-surface-150" id="achievements">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

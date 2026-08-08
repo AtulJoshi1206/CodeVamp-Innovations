@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="py-12 border-t border-white/5 bg-gradient-to-r from-background via-card to-background">
+    <footer className="py-12 border-t border-white/5 bg-gradient-to-r from-background via-surface-150 to-background">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
@@ -13,7 +13,7 @@ export const Footer = () => {
           </div>
 
           <p className="text-gray-500 text-[10px] uppercase tracking-widest font-medium">
-            &copy; {new Date().getFullYear()} Designed & Engineered by Atul Joshi
+            &copy; {new Date().getFullYear()} <span className="font-serif-display">Designed & Engineered by Atul Joshi</span>
           </p>
 
           <div className="flex items-center gap-6">

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0B0F1A',
+        background: '#07080D',
         card: '#12172A',
         accent: {
           primary: {
@@ -19,6 +19,7 @@ export default {
           },
         },
         surface: {
+          150: '#0A0D16',
           100: '#05070D',
           50: '#0F1420',
           0: '#161C2C',
@@ -28,6 +29,7 @@ export default {
         heading: ['Space Grotesk', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         serif: ['Instrument Serif', 'serif'],
+        'serif-display': ['Instrument Serif', 'serif'],
       },
       boxShadow: {
         glow: '0 0 20px rgba(99, 102, 241, 0.4)',

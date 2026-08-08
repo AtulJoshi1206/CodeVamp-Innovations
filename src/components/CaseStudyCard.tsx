@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 interface CaseStudyProps {
+  company: string;
+  role: string;
+  period: string;
   heroMetric: string;
   heroLabel: string;
   problem: string[];
@@ -11,6 +14,9 @@ interface CaseStudyProps {
 }
 
 export const CaseStudyCard: React.FC<CaseStudyProps> = ({
+  company,
+  role,
+  period,
   heroMetric,
   heroLabel,
   problem,
@@ -26,6 +32,17 @@ export const CaseStudyCard: React.FC<CaseStudyProps> = ({
       transition={{ duration: 0.8 }}
       className="rounded-3xl bg-gradient-to-br from-card to-surface-0 border border-white/10 p-12 md:p-16 space-y-12"
     >
+      {/* Company Header */}
+      <div className="pb-8 border-b border-white/10">
+        <h3 className="font-serif-display text-3xl md:text-4xl text-white mb-2">
+          {company}
+        </h3>
+        <p className="text-lg text-accent-primary-400 font-bold mb-3">{role}</p>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent-primary-500/10 to-accent-gold-500/10 border border-accent-primary-500/20">
+          <span className="text-sm font-bold text-gray-300">{period}</span>
+        </div>
+      </div>
+
       {/* Hero Metric */}
       <div className="flex items-baseline gap-6">
         <div className="flex flex-col">

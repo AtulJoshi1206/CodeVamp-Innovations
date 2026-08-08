@@ -20,7 +20,7 @@ export const ProjectsSection = () => {
   const others = archive;
 
   return (
-    <section className="py-24 overflow-hidden" id="projects">
+    <section className="py-32 overflow-hidden" id="projects">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <motion.div
@@ -29,7 +29,7 @@ export const ProjectsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-accent-primary-500 font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left">Selected Work</h2>
+            <h2 className="text-accent-primary-500 font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left font-serif-display">Selected Work</h2>
             <h3 className="text-4xl md:text-6xl font-bold text-white leading-[0.85] tracking-tighter">
               Business &amp; AI <br /> <span className="text-gray-600">Impact</span>
             </h3>

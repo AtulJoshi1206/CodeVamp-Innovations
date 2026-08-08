@@ -3,62 +3,62 @@ import { Trophy, Award, Star, Code2 } from 'lucide-react';
 
 const achievements = [
   {
+    category: 'Competitive & Hackathons',
+    icon: Trophy,
+    items: [
+      'Global Rank 18 — Spark-Wars 4.0 (Databricks x Celebal Technologies): Apache Spark, SQL, Data Engineering real-world challenges',
+      'Coordinated and executed 10+ college technical events and hackathons',
+      'Participated in hackathon-driven innovation and competitive problem-solving',
+      'Drove 40% participation boost through community engagement',
+    ],
+  },
+  {
     category: 'Technical Product Leadership',
     icon: Code2,
     items: [
-      'Led end-to-end platform migrations and system architecture',
-      'Owned AIT training platform serving internal and external users',
-      'Designed and deployed production systems processing millions of daily operations',
-      'Architected AI-driven workflow automation reducing operational overhead by 40%+',
+      'Led end-to-end AIT platform ownership serving internal teams and external users',
+      'Architected and deployed AI-driven automation reducing operational overhead by 40%+',
+      'Designed and deployed production systems handling 31+ course migrations at scale',
+      'Built algorithmic matching system (Python/NetworkX) serving 100+ monthly cross-venture participants',
     ],
   },
   {
-    category: 'Certifications',
-    icon: Award,
-    items: [
-      '15+ Google Cloud Platform badges',
-      'AWS Certified Cloud Practitioner',
-      'MongoDB University Certifications',
-      'TensorFlow Developer Certificate',
-    ],
-  },
-  {
-    category: 'Open Source',
+    category: 'Open Source & Research',
     icon: Star,
     items: [
-      'Active contributor in GSSOC',
-      'Participated in Hacktoberfest 2023',
-      'Multiple accepted pull requests',
-      'Maintained personal open-source projects',
+      'Active contributor to Hugging Face open-source programs',
+      'Published 2 peer-reviewed research papers on Kumaoni language preservation and neural machine translation (AJOMCOR)',
+      'Contributed to language digitization and cultural preservation initiatives',
+      'Engaged in continuous learning and community contribution',
     ],
   },
   {
-    category: 'Leadership',
-    icon: Trophy,
+    category: 'Leadership & Mentorship',
+    icon: Award,
     items: [
-      'Organized 10+ college technical events',
-      'Led team of 5 in hackathon projects',
-      'Mentored 300+ students in programming',
-      'Conducted workshops on web development',
+      'Mentored 300+ students in AI/ML principles and programming fundamentals',
+      'Organized 10+ college-wide technical events and festivals',
+      'Led team projects and coordinated hackathons with 40%+ participation growth',
+      'Facilitated in-depth learning through workshops and hands-on mentorship',
     ],
   },
 ];
 
 const AchievementCard = ({ achievement }: any) => {
   const Icon = achievement.icon;
-  
+
   return (
-    <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-750 transition-all">
+    <div className="card-glow p-6">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="p-3 bg-purple-500/10 rounded-lg">
-          <Icon className="w-6 h-6 text-purple-500" />
+        <div className="p-3 bg-accent-primary-500/10 rounded-lg">
+          <Icon className="w-6 h-6 text-accent-primary-500" />
         </div>
         <h3 className="text-xl font-semibold text-white">{achievement.category}</h3>
       </div>
       <ul className="space-y-4">
         {achievement.items.map((item: string) => (
           <li key={item} className="flex items-start text-gray-400">
-            <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 mr-3" />
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-primary-500 mt-2 mr-3" />
             <span>{item}</span>
           </li>
         ))}
@@ -69,9 +69,9 @@ const AchievementCard = ({ achievement }: any) => {
 
 export const AchievementsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 pt-20 pb-16">
+    <div className="min-h-screen bg-background pt-20 pb-16">
       <div className="container mx-auto px-6">
-        <h1 className="text-4xl font-bold text-white mb-12">Achievements</h1>
+        <h1 className="text-4xl font-bold text-white mb-12 font-serif-display">Achievements</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {achievements.map((achievement) => (
             <AchievementCard key={achievement.category} achievement={achievement} />

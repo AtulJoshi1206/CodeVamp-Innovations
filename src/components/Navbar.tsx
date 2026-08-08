@@ -23,7 +23,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-lg' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-surface-150/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <HashLink to="/#" className="group flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-accent-primary-500 flex gap-[2px] items-center justify-center group-hover:rotate-12 transition-transform">

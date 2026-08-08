@@ -102,11 +102,11 @@ const SkillCard = ({ category, idx }: { category: any; idx: number }) => {
 
 export const SkillsSection = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="skills">
+    <section className="py-32 bg-surface-150 relative overflow-hidden" id="skills">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-accent-primary-500/5 blur-[120px] rounded-full pointer-events-none opacity-50" />
 
       <div className="container mx-auto px-6 relative">
-        <div className="flex flex-col mb-12 md:mb-16">
+        <div className="flex flex-col mb-20 md:mb-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -115,7 +115,7 @@ export const SkillsSection = () => {
             className="flex items-center gap-3 mb-6"
           >
             <div className="h-px w-12 bg-accent-primary-500" />
-            <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-left">Toolkit</span>
+            <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-left font-serif-display">Toolkit</span>
           </motion.div>
           <h3 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tighter">
             Technical <br /> <span className="text-gray-600">Competencies</span>
