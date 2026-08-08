@@ -10,10 +10,14 @@ export const ProjectsSection = () => {
   const businessProjects = projects.filter(p => p.category === 'business');
   const engineeringProjects = projects.filter(p => p.category === 'engineering');
 
-  const heroProject = businessProjects[0];
-  const sideProjects = businessProjects.slice(1, 3);
-  const secondaryRow = businessProjects.slice(3);
-  const others = engineeringProjects;
+  // Featured grid falls back to engineering projects when no business projects are present
+  const featured = businessProjects.length > 0 ? businessProjects : engineeringProjects;
+  const archive = businessProjects.length > 0 ? engineeringProjects : [];
+
+  const heroProject = featured[0];
+  const sideProjects = featured.slice(1, 3);
+  const secondaryRow = featured.slice(3);
+  const others = archive;
 
   return (
     <section className="py-24 overflow-hidden" id="projects">
@@ -25,7 +29,7 @@ export const ProjectsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-accent-primary-500-500 font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left">Business &amp; AI Impact</h2>
+            <h2 className="text-accent-primary-500 font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left">Selected Work</h2>
             <h3 className="text-4xl md:text-6xl font-bold text-white leading-[0.85] tracking-tighter">
               Business &amp; AI <br /> <span className="text-gray-600">Impact</span>
             </h3>
@@ -148,6 +152,7 @@ export const ProjectsSection = () => {
         )}
 
         {/* Engineering Archive Toggle */}
+        {others.length > 0 && (
         <div className="flex flex-col items-center mt-8">
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -195,6 +200,7 @@ export const ProjectsSection = () => {
             )}
           </AnimatePresence>
         </div>
+        )}
       </div>
     </section>
   );
