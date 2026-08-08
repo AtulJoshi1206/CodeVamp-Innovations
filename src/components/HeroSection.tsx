@@ -14,8 +14,8 @@ export const HeroSection = () => {
     <section ref={containerRef} className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden border-b border-white/5 bg-[#0B0F1A]">
       {/* Background elements with parallax */}
       <motion.div style={{ y: y1 }} className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-accent-cyan/10 blur-[140px] rounded-full animate-pulse" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent-amber/5 blur-[140px] rounded-full animate-pulse" />
+        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-accent-primary/10 blur-[140px] rounded-full animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent-gold/5 blur-[140px] rounded-full animate-pulse" />
       </motion.div>
 
       <div className="container mx-auto px-6 relative">
@@ -27,9 +27,9 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex items-center gap-3 mb-8"
             >
-              <div className="h-[1px] w-12 bg-accent-cyan" />
-              <span className="text-accent-cyan font-bold tracking-[0.3em] text-xs uppercase text-left">
-                Engineering Solutions at Scale
+              <div className="h-[1px] w-12 bg-accent-primary" />
+              <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase text-left">
+                Bridging Business & AI
               </span>
             </motion.div>
 
@@ -39,7 +39,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-4xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tighter"
             >
-              Atul <span className="text-accent-cyan">Joshi</span>
+              Atul <span className="text-accent-primary">Joshi</span>
             </motion.h1>
 
             <motion.p
@@ -48,8 +48,8 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="text-xl md:text-2xl text-gray-400 max-w-xl mb-12 leading-relaxed font-medium"
             >
-              Architecting high-performance production systems and pioneering research in
-              <span className="text-white"> Natural Language Processing</span>.
+              Building scalable automation systems and AI-driven workflows that create measurable business impact — specialized in
+              <span className="text-white"> training infrastructure, platform migrations, and intelligent process optimization</span>.
             </motion.p>
 
             <motion.div
@@ -59,11 +59,11 @@ export const HeroSection = () => {
             >
               <a
                 href="#projects"
-                className="group relative inline-flex items-center gap-4 bg-white text-background px-12 py-6 rounded-full font-bold hover:bg-accent-cyan transition-all duration-500 shadow-2xl shadow-white/10 overflow-hidden"
+                className="group relative inline-flex items-center gap-4 bg-white text-background px-12 py-6 rounded-full font-bold hover:bg-accent-primary transition-all duration-500 shadow-2xl shadow-white/10 overflow-hidden"
               >
                 <span className="relative z-10">Selected Work</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
-                <div className="absolute inset-0 bg-accent-cyan translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-accent-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               </a>
             </motion.div>
           </motion.div>
@@ -74,7 +74,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="flex-1 relative group"
           >
-            <div className="absolute inset-0 bg-accent-cyan/10 blur-[100px] rounded-full group-hover:bg-accent-amber/10 transition-colors duration-1000" />
+            <div className="absolute inset-0 bg-accent-primary/10 blur-[100px] rounded-full group-hover:bg-accent-gold/10 transition-colors duration-1000" />
             <motion.div
               animate={{
                 y: [0, -10, 0],
@@ -86,15 +86,15 @@ export const HeroSection = () => {
               }}
               className="relative z-10"
             >
-              <div className="relative aspect-square max-w-[550px] mx-auto overflow-hidden rounded-[3rem] border border-white/10 bg-card p-3 shadow-2xl shadow-accent-cyan/5">
+              <div className="relative aspect-square max-w-[550px] mx-auto overflow-hidden rounded-[3rem] border border-white/10 bg-card p-3 shadow-2xl shadow-accent-primary/5">
                 <img
                   src={AtulImg}
                   alt="Atul Joshi"
                   className="w-full h-full object-cover rounded-[2.5rem] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-accent-cyan/30 rounded-tr-[4rem]" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-accent-amber/30 rounded-bl-[4rem]" />
+              <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-accent-primary/30 rounded-tr-[4rem]" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-accent-gold/30 rounded-bl-[4rem]" />
             </motion.div>
           </motion.div>
         </div>

@@ -7,11 +7,13 @@ import { projects } from '../data/projects';
 export const ProjectsSection = () => {
   const [showOther, setShowOther] = useState(false);
 
-  const featured = projects.slice(0, 3);
-  const others = projects.slice(3);
+  const businessProjects = projects.filter(p => p.category === 'business');
+  const engineeringProjects = projects.filter(p => p.category === 'engineering');
 
-  const heroProject = featured[0];
-  const sideProjects = featured.slice(1);
+  const heroProject = businessProjects[0];
+  const sideProjects = businessProjects.slice(1, 3);
+  const secondaryRow = businessProjects.slice(3);
+  const others = engineeringProjects;
 
   return (
     <section className="py-24 overflow-hidden" id="projects">
@@ -23,9 +25,9 @@ export const ProjectsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-accent-cyan font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left">Selected Work</h2>
+            <h2 className="text-accent-primary font-medium mb-4 uppercase tracking-[0.2em] text-sm text-left">Business &amp; AI Impact</h2>
             <h3 className="text-4xl md:text-6xl font-bold text-white leading-[0.85] tracking-tighter">
-              Selected <br /> <span className="text-gray-600">Work</span>
+              Business &amp; AI <br /> <span className="text-gray-600">Impact</span>
             </h3>
           </motion.div>
         </div>
@@ -50,7 +52,7 @@ export const ProjectsSection = () => {
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-card via-card/50 to-transparent" />
-              <Link to={`/projects/${heroProject.id}`} className="absolute top-8 right-8 h-12 w-12 md:h-16 md:w-16 rounded-full bg-accent-cyan flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500 shadow-xl group-hover:scale-110 z-20">
+              <Link to={`/projects/${heroProject.id}`} className="absolute top-8 right-8 h-12 w-12 md:h-16 md:w-16 rounded-full bg-accent-primary flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500 shadow-xl group-hover:scale-110 z-20">
                 <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 text-background" />
               </Link>
             </div>
@@ -98,19 +100,19 @@ export const ProjectsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
 
                 <div className="relative z-10 p-8">
-                  <h4 className="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors duration-500">{project.title}</h4>
+                  <h4 className="text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-accent-primary transition-colors duration-500">{project.title}</h4>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 3).map(tech => (
-                      <span key={tech} className="text-[10px] font-bold text-accent-cyan uppercase tracking-widest">{tech}</span>
+                      <span key={tech} className="text-[10px] font-bold text-accent-primary uppercase tracking-widest">{tech}</span>
                     ))}
                   </div>
                   <p className="text-gray-400 text-sm line-clamp-2 mb-2 leading-relaxed">{project.description}</p>
-                  <div className="h-[1px] w-0 group-hover:w-full bg-accent-cyan transition-all duration-700 mt-4" />
+                  <div className="h-[1px] w-0 group-hover:w-full bg-accent-primary transition-all duration-700 mt-4" />
                 </div>
 
                 <Link to={`/projects/${project.id}`} className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0 z-20">
-                  <div className="p-2 rounded-full border border-accent-cyan/20">
-                    <ArrowUpRight className="w-6 h-6 text-accent-cyan" />
+                  <div className="p-2 rounded-full border border-accent-primary/20">
+                    <ArrowUpRight className="w-6 h-6 text-accent-primary" />
                   </div>
                 </Link>
               </motion.div>
@@ -118,7 +120,34 @@ export const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Other Work Toggle */}
+        {/* Secondary Business Project Row */}
+        {secondaryRow.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {secondaryRow.map((project) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="group relative overflow-hidden rounded-[2rem] bg-card border border-white/10 p-8"
+              >
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.slice(0, 3).map(tech => (
+                    <span key={tech} className="text-[10px] font-bold text-accent-primary uppercase tracking-widest">{tech}</span>
+                  ))}
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-accent-primary transition-colors duration-500">{project.title}</h4>
+                <p className="text-gray-400 text-sm line-clamp-3 mb-4 leading-relaxed">{project.description}</p>
+                <Link to={`/projects/${project.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent-primary">
+                  View Project <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {/* Engineering Archive Toggle */}
         <div className="flex flex-col items-center mt-8">
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -126,7 +155,7 @@ export const ProjectsSection = () => {
             onClick={() => setShowOther(!showOther)}
             className="flex items-center gap-3 text-gray-500 hover:text-white transition-all py-8 group"
           >
-            <span className="font-bold tracking-[0.2em] uppercase text-xs">{showOther ? 'Hide Archives' : 'Explore Archives'}</span>
+            <span className="font-bold tracking-[0.2em] uppercase text-xs">{showOther ? 'Hide Engineering Archive' : 'Explore Engineering Work'}</span>
             <div className="p-2 rounded-full border border-white/5 group-hover:border-white/20 transition-colors">
               {showOther ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </div>
@@ -150,7 +179,7 @@ export const ProjectsSection = () => {
                       transition={{ delay: i * 0.05, duration: 0.4 }}
                       className="group p-8 rounded-[2rem] bg-card border border-white/5 transition-all duration-300 hover:border-white/10"
                     >
-                      <h5 className="text-xl font-bold text-white mb-4 group-hover:text-accent-cyan transition-colors">{project.title}</h5>
+                      <h5 className="text-xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors">{project.title}</h5>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.map(tech => (
                           <span key={tech} className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{tech}</span>

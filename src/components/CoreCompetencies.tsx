@@ -1,28 +1,35 @@
 import { motion } from 'framer-motion';
-import { Server, Code2, Brain } from 'lucide-react';
+import { Workflow, Brain, GitBranch, BarChart3 } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 const competencies = [
     {
-        title: 'Systems Engineering',
-        description: 'Scalable architectures, distributed systems, performance optimization.',
-        icon: Server,
-        color: 'text-accent-cyan',
-        bg: 'bg-accent-cyan/10'
+        title: 'Business Operations & Process Automation',
+        description: 'Streamlining operational workflows, replacing manual tooling with purpose-built systems, and eliminating repetitive work at scale.',
+        icon: Workflow,
+        color: 'text-accent-primary',
+        bg: 'bg-accent-primary/10'
     },
     {
-        title: 'Full-Stack Development',
-        description: 'End-to-end applications, APIs, real-time features, cloud deployment.',
-        icon: Code2,
+        title: 'AI Integration & Agentic Workflows',
+        description: 'Designing Claude-based automation, agentic workflows, and AI-driven content and task pipelines that drive measurable business impact.',
+        icon: Brain,
+        color: 'text-accent-gold',
+        bg: 'bg-accent-gold/10'
+    },
+    {
+        title: 'Platform Migration & Systems Architecture',
+        description: 'Leading large-scale platform migrations and building scalable, well-architected systems on modern full-stack infrastructure.',
+        icon: GitBranch,
         color: 'text-white',
         bg: 'bg-white/10'
     },
     {
-        title: 'AI/ML Engineering',
-        description: 'NLP systems, language models, model optimization, research.',
-        icon: Brain,
-        color: 'text-accent-amber',
-        bg: 'bg-accent-amber/10'
+        title: 'Data-Driven Decision Ops',
+        description: 'Building reporting, analytics, and matching algorithms that turn operational data into actionable, measurable outcomes.',
+        icon: BarChart3,
+        color: 'text-accent-primary',
+        bg: 'bg-accent-primary/10'
     }
 ];
 
@@ -84,18 +91,18 @@ export const CoreCompetencies = () => {
                             transition={{ duration: 0.8 }}
                             className="flex items-center gap-3 mb-6"
                         >
-                            <div className="h-px w-12 bg-accent-cyan" />
-                            <span className="text-accent-cyan font-bold tracking-[0.3em] text-xs uppercase">Expertise</span>
+                            <div className="h-px w-12 bg-accent-primary" />
+                            <span className="text-accent-primary font-bold tracking-[0.3em] text-xs uppercase">Expertise</span>
                         </motion.div>
                         <h3 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[0.85] tracking-tighter">
                             Core <br /> <span className="text-gray-600">Competencies</span>
                         </h3>
                         <p className="text-gray-400 text-lg max-w-md leading-relaxed">
-                            Bridging the gap between high-scale systems architecture and cutting-edge artificial intelligence.
+                            Bridging the gap between business operations and cutting-edge artificial intelligence.
                         </p>
                     </div>
 
-                    <div className="flex-[2] grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000">
+                    <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-8 perspective-1000">
                         {competencies.map((item, index) => (
                             <CompetencyCard key={item.title} item={item} index={index} />
                         ))}

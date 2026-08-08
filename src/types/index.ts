@@ -11,6 +11,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   documentation?: string;
+  category: 'business' | 'engineering';
 }
 
 export interface Experience {

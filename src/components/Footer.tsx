@@ -4,7 +4,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-accent-cyan flex gap-[1px] items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-accent-primary flex gap-[1px] items-center justify-center">
               <div className="w-[2px] h-2 bg-background rounded-full" />
               <div className="w-[2px] h-3 bg-background rounded-full" />
               <div className="w-[2px] h-2 bg-background rounded-full" />
@@ -21,7 +21,7 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/atul-joshi-54928018a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-accent-cyan transition-colors"
+              className="text-gray-500 hover:text-accent-primary transition-colors"
             >
               <span className="text-[10px] uppercase tracking-widest font-bold">LinkedIn</span>
             </a>
