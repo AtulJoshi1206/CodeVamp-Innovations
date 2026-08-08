@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 
 const metrics = [
-  { value: '1,000+', label: 'API requests / sec', category: 'Systems' },
   { value: '2', label: 'Published Papers', category: 'Research' },
   { value: '500+', label: 'Students Mentored', category: 'Leadership' },
-  { value: '600+', label: 'LeetCode Solved', category: 'Engineering' },
+  { value: '40%+', label: 'Faster SLA Turnaround', category: 'Operations' },
   { value: '99.9%', label: 'Uptime SLA', category: 'Systems' },
   { value: '99.9%', label: 'NLP Accuracy', category: 'Research' },
   { value: '10+', label: 'Hackathons Organized', category: 'Community' },
-  { value: '5*', label: 'HackerRank Rating', category: 'Engineering' },
+  { value: '31+', label: 'Courses Migrated & Owned', category: 'Product' },
 ];
 
 export const AchievementsSection = () => {

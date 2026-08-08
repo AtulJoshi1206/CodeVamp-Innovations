@@ -17,7 +17,6 @@ export const projects: Project[] = [
       'Designed and deployed a full-stack platform supporting Python, C++, and C',
       'Reduced code execution latency by 35% through Piston API integration',
       'Optimized backend with MongoDB for seamless storage and user data retrieval',
-      'Handled over 1,000 API requests per second with serverless architecture',
       'Integrated real-time leaderboards using WebSockets and Socket.io',
       'Automated streak system and milestone badges for user engagement'
     ],
@@ -28,7 +27,6 @@ export const projects: Project[] = [
     ],
     achievements: [
       '35% Latency Reduction',
-      '1,000+ Requests/Sec',
       '100% Serverless Stack'
     ],
     images: [CodeVampImg],

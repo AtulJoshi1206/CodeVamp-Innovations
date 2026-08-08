@@ -30,7 +30,7 @@ export const HeroSection = () => {
             >
               <div className="h-[1px] w-12 bg-accent-primary-500" />
               <span className="text-accent-primary-500 font-bold tracking-[0.3em] text-xs uppercase text-left">
-                Bridging Business & AI
+                Technical Lead (Product) · Bridging Business & AI
               </span>
             </motion.div>
 

@@ -3,13 +3,13 @@ import { Trophy, Award, Star, Code2 } from 'lucide-react';
 
 const achievements = [
   {
-    category: 'Competitive Coding',
+    category: 'Technical Product Leadership',
     icon: Code2,
     items: [
-      'Solved 600+ challenges on LeetCode',
-      'Ranked among top 100 in college',
-      'Achieved 5-star rating on HackerRank',
-      'Participated in 20+ coding competitions',
+      'Led end-to-end platform migrations and system architecture',
+      'Owned AIT training platform serving internal and external users',
+      'Designed and deployed production systems processing millions of daily operations',
+      'Architected AI-driven workflow automation reducing operational overhead by 40%+',
     ],
   },
   {

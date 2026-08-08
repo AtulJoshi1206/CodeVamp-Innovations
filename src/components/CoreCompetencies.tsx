@@ -21,7 +21,7 @@ const competencies = [
     },
     {
         title: 'Platform Migration & Systems Architecture',
-        description: 'Leading large-scale platform migrations and building scalable, well-architected systems on modern full-stack infrastructure.',
+        description: 'Owning end-to-end platform migrations and building scalable, well-architected systems on modern full-stack infrastructure through technical product leadership.',
         icon: GitBranch,
         color: 'text-white',
         bg: 'bg-white/10',

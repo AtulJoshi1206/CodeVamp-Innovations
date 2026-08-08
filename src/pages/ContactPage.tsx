@@ -15,12 +15,6 @@ const socialLinks = [
     username: 'Atul Joshi',
   },
   {
-    icon: Code2,
-    href: 'https://leetcode.com/atuljoshi',
-    label: 'LeetCode',
-    username: '@atuljoshi',
-  },
-  {
     icon: BookOpen,
     href: 'https://geeksforgeeks.org/user/atuljoshi',
     label: 'GeeksforGeeks',

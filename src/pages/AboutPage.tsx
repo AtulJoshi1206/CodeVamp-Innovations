@@ -70,7 +70,7 @@ export const AboutPage = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-2">CodeVamp Online Platform</h3>
                   <ul className="space-y-1 text-sm text-gray-300">
-                    <li>• 1,000+ API requests/second</li>
+                    <li>• 35% latency reduction</li>
                     <li>• 99.9% uptime SLA</li>
                     <li>• 95% user satisfaction</li>
                     <li>• 10+ language support</li>

@@ -4,16 +4,17 @@ export const internships: Experience[] = [
   {
     id: 'weblife-labs',
     company: 'Weblife Labs',
-    role: 'Business Operations & AI Automation Lead',
-    period: 'Aug 2025 – Present',
+    role: 'Technical Lead (Product) — AI & Business Operations',
+    period: 'July 2026 – Present',
     description: 'Leading the technical build of a SaaS Contract Management System and driving business-wide AI automation initiatives across training, operations, and cross-venture programs.',
     highlights: [
+      'Own the AIT training platform end-to-end — internal team enablement and external/customer-facing delivery — as technical product lead.',
+      'Reduced operational SLA turnaround time by 40%+ through AI-driven workflow automation across course and content operations.',
       'Leading the technical build of a SaaS Subscription & Contract Management System (Next.js, Node.js, TypeScript, PostgreSQL, Prisma) to replace legacy ClickUp-based tooling.',
       'Migrated 31+ role-aligned training courses to the AIT platform and built 5+ reusable Claude Skills for content automation and formatting.',
-      'Designed and deployed the Peer Connect algorithm (Python, NetworkX) for cross-venture employee matching, serving 100+ participants monthly.',
-      'Built a Claude-based AI workflow automation suite for course content generation, formatting, and bulk ClickUp task operations, driving 25%+ efficiency gains.'
+      'Designed and deployed the Peer Connect algorithm (Python, NetworkX) for cross-venture employee matching, serving 100+ participants monthly.'
     ],
-    skills: ['Operations Automation', 'AI Integration', 'TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Python', 'NetworkX', 'ClickUp MCP', 'Claude'],
+    skills: ['Operations Automation', 'AI Integration', 'TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Python', 'NetworkX', 'ClickUp MCP', 'Claude', 'Product Ownership', 'SLA Management', 'Platform Operations'],
     images: []
   },
   {
