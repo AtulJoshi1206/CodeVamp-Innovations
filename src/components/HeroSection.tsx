@@ -49,9 +49,10 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="text-xl md:text-2xl text-gray-400 max-w-xl mb-16 leading-relaxed font-medium"
             >
-              Technical Lead (Product) building AI systems that make
-              <span className="text-white"> auditable decisions in production</span>, and contributing root-cause fixes to the
+              I build AI systems that make
+              <span className="text-white"> auditable decisions in production</span>, and contribute root-cause fixes to the
               <span className="text-white"> agent frameworks they run on</span>, including Google's Agent Development Kit and AWS Powertools.
+              I work across engineering, product and delivery, and I'm comfortable owning a problem end to end.
             </motion.p>
 
             <motion.div

@@ -29,8 +29,8 @@ const competencies: Competency[] = [
         borderAccent: 'border-l-4 border-accent-primary-500'
     },
     {
-        title: 'Delivery & Technical Leadership',
-        description: 'Owning platform migrations and AI rollouts end to end as Technical Lead (Product), from discovery and stakeholder alignment to launch and measurement.',
+        title: 'Delivery & Ownership',
+        description: 'Taking platform migrations and AI rollouts end to end, from discovery and stakeholder alignment to launch and measurement.',
         icon: GitBranch,
         color: 'text-white',
         bg: 'bg-white/10',
