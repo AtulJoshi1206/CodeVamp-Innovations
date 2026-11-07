@@ -22,10 +22,10 @@ export const ContactSection = () => {
 
             <a
               href="mailto:atul.joshi1206@gmail.com"
-              className="inline-flex items-center gap-4 px-10 py-8 rounded-3xl bg-gradient-to-r from-accent-primary-600 to-accent-gold-600 hover:from-accent-primary-500 hover:to-accent-gold-500 transition-all duration-500 shadow-glow mb-20 group"
+              className="inline-flex max-w-full items-center gap-3 sm:gap-4 px-6 py-6 sm:px-10 sm:py-8 rounded-3xl bg-gradient-to-r from-accent-primary-600 to-accent-gold-600 hover:from-accent-primary-500 hover:to-accent-gold-500 transition-all duration-500 shadow-glow mb-20 group"
             >
-              <span className="text-2xl md:text-4xl font-bold text-white">atul.joshi1206@gmail.com</span>
-              <ArrowRight className="w-8 h-8 text-white group-hover:translate-x-2 transition-transform" />
+              <span className="min-w-0 break-all text-lg sm:text-2xl md:text-4xl font-bold text-white">atul.joshi1206@gmail.com</span>
+              <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 shrink-0 text-white group-hover:translate-x-2 transition-transform" />
             </a>
 
             <div className="flex justify-center flex-wrap gap-8 md:gap-12">
