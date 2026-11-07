@@ -15,6 +15,7 @@ export const Navbar = () => {
 
   const links = [
     { label: 'Work', to: '/#projects' },
+    { label: 'Open Source', to: '/#open-source' },
     { label: 'Research', to: '/#research' },
     { label: 'Skills', to: '/#skills' },
     { label: 'Experience', to: '/#experience' },

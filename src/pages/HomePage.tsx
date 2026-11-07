@@ -1,5 +1,6 @@
 import { HeroSection } from '../components/HeroSection';
 import { ProofStrip } from '../components/ProofStrip';
+import { OpenSourceSection } from '../components/OpenSourceSection';
 import { CoreCompetencies } from '../components/CoreCompetencies';
 import { ProjectsSection } from '../components/ProjectsSection';
 
@@ -14,6 +15,7 @@ export const HomePage = () => {
     <main className="bg-background">
       <HeroSection />
       <ProofStrip />
+      <OpenSourceSection />
       <CoreCompetencies />
       <ProjectsSection />
 
