@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
-import AtulImg from '../Images/Atul_joshi.png';
+import AtulImg from '../Images/atul-headshot.jpg';
 
 export const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ export const HeroSection = () => {
             >
               <div className="h-[1px] w-12 bg-accent-primary-500" />
               <span className="font-serif-display text-sm text-accent-primary-500">
-                Technical Lead (Product) · Bridging Business & AI
+                AI Engineering · Product · Delivery
               </span>
             </motion.div>
 
@@ -40,7 +40,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="mb-12 leading-[0.9] tracking-tighter"
             >
-              <span className="font-serif-display text-5xl md:text-7xl lg:text-8xl text-gradient">Atul Joshi</span>
+              <span className="font-serif-display text-5xl md:text-7xl lg:text-8xl text-gradient inline-block pr-[0.15em]">Atul Joshi</span>
             </motion.h1>
 
             <motion.p
@@ -49,14 +49,16 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="text-xl md:text-2xl text-gray-400 max-w-xl mb-16 leading-relaxed font-medium"
             >
-              Building scalable automation systems and AI-driven workflows that create measurable business impact — specialized in
-              <span className="text-white"> training infrastructure, platform migrations, and intelligent process optimization</span>.
+              Technical Lead (Product) building AI systems that make
+              <span className="text-white"> auditable decisions in production</span>, and contributing root-cause fixes to the
+              <span className="text-white"> agent frameworks they run on</span>, including Google's Agent Development Kit and AWS Powertools.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="flex flex-wrap items-center gap-4"
             >
               <a
                 href="#projects"
@@ -65,6 +67,12 @@ export const HeroSection = () => {
                 <span className="relative z-10">Selected Work</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
                 <div className="absolute inset-0 bg-accent-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              </a>
+              <a
+                href="#open-source"
+                className="inline-flex items-center gap-3 px-10 py-6 rounded-full font-bold text-white border border-white/15 hover:border-accent-primary-500 hover:text-accent-primary-500 transition-colors duration-500"
+              >
+                Open source
               </a>
             </motion.div>
           </motion.div>
@@ -87,11 +95,11 @@ export const HeroSection = () => {
               }}
               className="relative z-10"
             >
-              <div className="relative aspect-square max-w-[550px] mx-auto overflow-hidden rounded-[3rem] border border-white/10 bg-card p-3 shadow-2xl shadow-accent-primary/5">
+              <div className="relative aspect-[4/5] max-w-[460px] mx-auto overflow-hidden rounded-[3rem] border border-white/10 bg-card p-3 shadow-2xl shadow-accent-primary/5">
                 <img
                   src={AtulImg}
                   alt="Atul Joshi"
-                  className="w-full h-full object-cover rounded-[2.5rem] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                  className="w-full h-full object-cover object-top rounded-[2.5rem] transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-accent-primary/30 rounded-tr-[4rem]" />
