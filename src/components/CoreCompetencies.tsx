@@ -1,43 +1,52 @@
 import { motion } from 'framer-motion';
-import { Workflow, Brain, GitBranch, BarChart3 } from 'lucide-react';
+import { Brain, Target, GitBranch, Workflow, type LucideIcon } from 'lucide-react';
 import { useRef, useState } from 'react';
 
-const competencies = [
+interface Competency {
+    title: string;
+    description: string;
+    icon: LucideIcon;
+    color: string;
+    bg: string;
+    borderAccent: string;
+}
+
+const competencies: Competency[] = [
     {
-        title: 'Business Operations & Process Automation',
-        description: 'Streamlining operational workflows, replacing manual tooling with purpose-built systems, and eliminating repetitive work at scale.',
-        icon: Workflow,
-        color: 'text-accent-primary-500',
-        bg: 'bg-accent-primary-500/10',
-        borderAccent: 'border-l-4 border-accent-primary-500'
-    },
-    {
-        title: 'AI Integration & Agentic Workflows',
-        description: 'Designing Claude-based automation, agentic workflows, and AI-driven content and task pipelines that drive measurable business impact.',
+        title: 'AI Engineering & Agent Reliability',
+        description: 'Building agentic systems and shipping root-cause fixes upstream to Google ADK and AWS Powertools: live sessions, tool and MCP lifecycles, and state under concurrency.',
         icon: Brain,
         color: 'text-accent-gold-500',
         bg: 'bg-accent-gold-500/10',
         borderAccent: 'border-l-4 border-accent-gold-500'
     },
     {
-        title: 'Platform Migration & Systems Architecture',
-        description: 'Owning end-to-end platform migrations and building scalable, well-architected systems on modern full-stack infrastructure through technical product leadership.',
+        title: 'Product Thinking',
+        description: 'Starting from the user and the business constraint, agreeing on what success means before building, and scoping the smallest system that proves the outcome.',
+        icon: Target,
+        color: 'text-accent-primary-500',
+        bg: 'bg-accent-primary-500/10',
+        borderAccent: 'border-l-4 border-accent-primary-500'
+    },
+    {
+        title: 'Delivery & Technical Leadership',
+        description: 'Owning platform migrations and AI rollouts end to end as Technical Lead (Product), from discovery and stakeholder alignment to launch and measurement.',
         icon: GitBranch,
         color: 'text-white',
         bg: 'bg-white/10',
         borderAccent: 'border-l-4 border-accent-primary-500'
     },
     {
-        title: 'Data-Driven Decision Ops',
-        description: 'Building reporting, analytics, and matching algorithms that turn operational data into actionable, measurable outcomes.',
-        icon: BarChart3,
+        title: 'Business Operations & Automation',
+        description: 'Replacing manual tooling with purpose-built systems and AI-driven pipelines, and turning operational data into reporting and decisions that move measurable outcomes.',
+        icon: Workflow,
         color: 'text-accent-primary-500',
         bg: 'bg-accent-primary-500/10',
         borderAccent: 'border-l-4 border-accent-gold-500'
     }
 ];
 
-const CompetencyCard = ({ item, index }: { item: any; index: number }) => {
+const CompetencyCard = ({ item, index }: { item: Competency; index: number }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
@@ -104,7 +113,7 @@ export const CoreCompetencies = () => {
                             Core <br /> <span className="text-gray-600">Competencies</span>
                         </h3>
                         <p className="text-gray-400 text-lg max-w-md leading-relaxed">
-                            Bridging the gap between business operations and cutting-edge artificial intelligence.
+                            Where AI engineering, product judgment and delivery meet: systems that solve a real business problem and keep working in production.
                         </p>
                     </div>
 
